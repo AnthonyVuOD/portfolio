@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Anthony Vu</title>
+    <link rel="stylesheet" href="scss/portfolio.css" charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.js"></script>
+    <script src="js/portfolio.js"></script>
+  </head>
+  <body ng-app="portfolioModule" ng-controller="indexCTRL">
+    <div id="outerWrapper">
+
+      <div id="header" ng-if="landingPage">
+        <h3><span>ANTHONY VU</span> Front-End Web Developer</h3>
+      </div>
+
+      <div id="menu" ng-if="!landingPage">
+        <ul>
+          <li><a href="#/contact">Contact</a></li>
+          <li><a href="#/workflow">Workflow</a></li>
+          <li><a href="#/portfolio">Portfolio</a></li>
+          <li><a href="#/about">About</a></li>
+          <li><a href="#/home">Home</a></li>
+        </ul>
+      </div>
+
+      <div id="innerWrapper" class="template" ng-view>
+      </div>
+
+    </div>
+
+  </body>
+</html>

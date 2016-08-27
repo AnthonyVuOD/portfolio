@@ -1,0 +1,248 @@
+//INDEX
+body {
+  margin:0;
+  padding:0;
+  font-size: 16px;
+  background-color: yellow;
+  height: 100vh;
+}
+#outerWrapper {
+  position: absolute;
+  width:90%;
+  height: 80vh;
+  margin: auto;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+.template {
+
+}
+#header{
+  width:100%;
+  height: 10%;
+  z-index: 100;
+  position: absolute;
+  float: left;
+  background-color: red;
+  h3{
+    position: absolute;
+    bottom: -25px;
+    right: 0;
+    font-size: 22px;
+    padding-right: 2%;
+    span{
+      font-size: 1.5em;
+      padding-right: 15px;
+    }
+  }
+  &.ng-enter {
+    -webkit-transition:1s linear all;
+    opacity:0;
+  }
+  &.ng-enter.ng-enter-active {
+    -webkit-transition-delay: 1s;
+    opacity:1;
+  }
+  &.ng-leave {
+    -webkit-transition:0.5s linear all;
+    opacity:1;
+  }
+  &.ng-leave.ng-leave-active {
+    opacity:0;
+  }
+}
+#menu{
+  width:100%;
+  height: 10%;
+  background-color: red;
+  position: absolute;
+  float: left;
+  ul{
+    li{
+      display: inline-block;
+      float: right;
+      padding-right: 2%;
+      a {
+        text-decoration: none;
+        color: black;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  &.ng-enter {
+    -webkit-transition:0.5s linear all;
+    opacity:0;
+  }
+  &.ng-enter.ng-enter-active {
+    -webkit-transition-delay: 1s;
+    opacity:1;
+  }
+  &.ng-leave {
+    -webkit-transition:0.5s linear all;
+    opacity:1;
+  }
+  &.ng-leave.ng-leave-active {
+    opacity:0;
+  }
+}
+#innerWrapper {
+  width:100%;
+  height: 90%;
+  position: absolute;
+  top:10%;
+}
+
+//HOME
+#homePhoto{
+  position: relative;
+  float: left;
+  height:100%;
+  width:32%;
+  background-color: red;
+  &.ng-enter {
+    -webkit-transition:0.65s linear all;
+    -webkit-transform: translateX(-35px);
+    transform: translateX(-35px);
+    opacity:0;
+  }
+
+  &.ng-enter.ng-enter-active {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity:1;
+  }
+  &.ng-leave {
+    -webkit-transition:0.5s linear all;
+    opacity:1;
+  }
+  &.ng-leave.ng-leave-active {
+    opacity:0;
+  }
+}
+#homeAbout{
+  background-color: black;
+  &.ng-enter {
+    -webkit-transition:0.65s linear all;
+    -webkit-transform: translateY(-35px);
+    transform: translateY(-35px);
+    opacity:0;
+  }
+
+  &.ng-enter.ng-enter-active {
+    opacity:1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  &.ng-leave {
+    -webkit-transition:0.5s linear all;
+    opacity:1;
+  }
+  &.ng-leave.ng-leave-active {
+    opacity:0;
+  }
+}
+#homePortfolio{
+  background-color: white;
+  &.ng-enter {
+    -webkit-transition:0.65s linear all;
+    -webkit-transform: translate(30px, -30px);
+    transform: translate(30px, -30px);
+    opacity:0;
+  }
+  &.ng-enter.ng-enter-active {
+    opacity:1;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  &.ng-leave {
+    -webkit-transition:0.5s linear all;
+    opacity:1;
+  }
+  &.ng-leave.ng-leave-active {
+    opacity:0;
+  }
+}
+#homeTBD{
+  background-color: purple;
+  &.ng-enter {
+    -webkit-transition:0.65s linear all;
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+    opacity:0;
+  }
+
+  &.ng-enter.ng-enter-active {
+    opacity:1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  &.ng-leave {
+    -webkit-transition:0.5s linear all;
+    opacity:1;
+  }
+  &.ng-leave.ng-leave-active {
+    opacity:0;
+  }
+}
+#homeContact{
+  background-color: blue;
+  &.ng-enter {
+    -webkit-transition:0.65s linear all;
+    -webkit-transform: translate(25px, 25px);
+    transform: translate(25px, 25px);
+    opacity:0;
+  }
+  &.ng-enter.ng-enter-active {
+    opacity:1;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  &.ng-leave {
+    -webkit-transition:0.5s linear all;
+    opacity:1;
+  }
+  &.ng-leave.ng-leave-active {
+    opacity:0;
+  }
+}
+.homeLinks{
+  position: relative;
+  float: left;
+  width:34%;
+  height: 50%;
+  h2{
+    position: absolute;
+    bottom: -6%;
+    right:5%;
+  }
+}
+//ABOUT
+#aboutPhoto {
+  float: left;
+  width:32%;
+  height: 100%;
+  background-color: green;
+}
+#aboutContent{
+  float: left;
+  width: 68%;
+  height: 100%;
+  background-color: gray;
+}
+// CONTACT
+#contactPhoto {
+  float: left;
+  width: 32%;
+  height: 100%;
+  background-color: red;
+}
+#contactContent {
+  float: left;
+  width: 68%;
+  height: 100%;
+  background-color: green;
+}
