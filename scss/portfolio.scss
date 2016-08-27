@@ -16,15 +16,10 @@ body {
   right:0;
   bottom:0;
 }
-.template {
-
-}
 #header{
   width:100%;
   height: 10%;
-  z-index: 100;
   position: absolute;
-  float: left;
   background-color: red;
   h3{
     position: absolute;
@@ -38,11 +33,11 @@ body {
     }
   }
   &.ng-enter {
-    -webkit-transition:1s linear all;
+    -webkit-transition:2s linear all;
     opacity:0;
   }
   &.ng-enter.ng-enter-active {
-    -webkit-transition-delay: 1s;
+    -webkit-transition-delay: 1.2s;
     opacity:1;
   }
   &.ng-leave {
@@ -58,15 +53,17 @@ body {
   height: 10%;
   background-color: red;
   position: absolute;
-  float: left;
   ul{
+    position: relative;
     li{
       display: inline-block;
       float: right;
       padding-right: 2%;
+      position: relative;
       a {
         text-decoration: none;
         color: black;
+        bottom:0;
         &:hover {
           text-decoration: underline;
         }
@@ -74,11 +71,11 @@ body {
     }
   }
   &.ng-enter {
-    -webkit-transition:0.5s linear all;
+    -webkit-transition:2s linear all;
     opacity:0;
   }
   &.ng-enter.ng-enter-active {
-    -webkit-transition-delay: 1s;
+    -webkit-transition-delay: 0.5s;
     opacity:1;
   }
   &.ng-leave {
@@ -94,6 +91,13 @@ body {
   height: 90%;
   position: absolute;
   top:10%;
+  &.ng-leave {
+    -webkit-transition:0.5s linear all;
+    opacity:1;
+  }
+  &.ng-leave.ng-leave-active {
+    opacity:0;
+  }
 }
 
 //HOME
@@ -133,9 +137,9 @@ body {
   }
 
   &.ng-enter.ng-enter-active {
-    opacity:1;
     -webkit-transform: translateY(0);
     transform: translateY(0);
+    opacity:1;
   }
   &.ng-leave {
     -webkit-transition:0.5s linear all;
@@ -154,9 +158,9 @@ body {
     opacity:0;
   }
   &.ng-enter.ng-enter-active {
-    opacity:1;
     -webkit-transform: translate(0);
     transform: translate(0);
+    opacity:1;
   }
   &.ng-leave {
     -webkit-transition:0.5s linear all;
@@ -226,23 +230,171 @@ body {
   width:32%;
   height: 100%;
   background-color: green;
+  &.ng-enter {
+    -webkit-transition:0.65s linear all;
+    -webkit-transform: translateX(-35px);
+    transform: translateX(-35px);
+    opacity:0;
+  }
+
+  &.ng-enter.ng-enter-active {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity:1;
+  }
+  &.ng-leave {
+    -webkit-transition:0.5s linear all;
+    opacity:1;
+  }
+  &.ng-leave.ng-leave-active {
+    opacity:0;
+  }
 }
 #aboutContent{
   float: left;
   width: 68%;
   height: 100%;
   background-color: gray;
+  &.ng-enter {
+    -webkit-transition:0.65s linear all;
+    -webkit-transform: translateX(35px);
+    transform: translateX(35px);
+    opacity:0;
+  }
+
+  &.ng-enter.ng-enter-active {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity:1;
+  }
+  &.ng-leave {
+    -webkit-transition:0.5s linear all;
+    opacity:1;
+  }
+  &.ng-leave.ng-leave-active {
+    opacity:0;
+  }
 }
+//PORTFOLIO
+.projects {
+  float: left;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  &.ng-enter {
+    -webkit-transition:.55s linear all;
+    opacity:0;
+  }
+  &.ng-enter.ng-enter-active {
+    opacity:1;
+  }
+  h2 {
+    position: absolute;
+    bottom: 0%;
+    right:5%;
+  }
+}
+
+//WORKFLOW
+#workflowPhoto {
+  float: left;
+  width:32%;
+  height: 100%;
+  background-color: purple;
+  &.ng-enter {
+    -webkit-transition:0.65s linear all;
+    -webkit-transform: translateX(-35px);
+    transform: translateX(-35px);
+    opacity:0;
+  }
+
+  &.ng-enter.ng-enter-active {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity:1;
+  }
+  &.ng-leave {
+    -webkit-transition:0.5s linear all;
+    opacity:1;
+  }
+  &.ng-leave.ng-leave-active {
+    opacity:0;
+  }
+}
+#workflowContent{
+  float: left;
+  width: 68%;
+  height: 100%;
+  background-color: black;
+  &.ng-enter {
+    -webkit-transition:0.65s linear all;
+    -webkit-transform: translateX(35px);
+    transform: translateX(35px);
+    opacity:0;
+  }
+
+  &.ng-enter.ng-enter-active {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity:1;
+  }
+  &.ng-leave {
+    -webkit-transition:0.5s linear all;
+    opacity:1;
+  }
+  &.ng-leave.ng-leave-active {
+    opacity:0;
+  }
+}
+
 // CONTACT
 #contactPhoto {
   float: left;
   width: 32%;
   height: 100%;
   background-color: red;
+  &.ng-enter {
+    -webkit-transition:0.65s linear all;
+    -webkit-transform: translateX(-35px);
+    transform: translateX(-35px);
+    opacity:0;
+  }
+
+  &.ng-enter.ng-enter-active {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity:1;
+  }
+  &.ng-leave {
+    -webkit-transition:0.5s linear all;
+    opacity:1;
+  }
+  &.ng-leave.ng-leave-active {
+    opacity:0;
+  }
 }
 #contactContent {
   float: left;
   width: 68%;
   height: 100%;
   background-color: green;
+  &.ng-enter {
+    -webkit-transition:0.65s linear all;
+    -webkit-transform: translateX(35px);
+    transform: translateX(35px);
+    opacity:0;
+  }
+
+  &.ng-enter.ng-enter-active {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity:1;
+  }
+  &.ng-leave {
+    -webkit-transition:0.5s linear all;
+    opacity:1;
+  }
+  &.ng-leave.ng-leave-active {
+    opacity:0;
+  }
 }

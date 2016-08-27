@@ -30,23 +30,41 @@ var app = angular
   .controller('indexCTRL', function($rootScope, $scope, $location){
     $rootScope.$on('$routeChangeSuccess', function(){
       $scope.landingPage = $location.path() === '/home';
-    })
+    });
   })
   .controller('homeCTRL', function($scope, $timeout){
     $scope.fade=false;
       $timeout(function(){
-        $scope.fade=true
-      },600)
+        $scope.fade=true;
+      },550);
   })
-  .controller('aboutCTRL', function($scope){
-
+  .controller('aboutCTRL', function($scope, $timeout){
+    $scope.fade=false;
+      $timeout(function(){
+        $scope.fade=true;
+      },400);
   })
-  .controller('portfolioCTRL', function($scope){
-
+  .controller('portfolioCTRL', function($scope, $timeout){
+    $scope.items = [
+      {project: "project 1", color: "purple", delay: ".1s"},
+      {project: "project 2", color: "green", delay: ".2s"},
+      {project: "project 3", color: "red", delay: ".3s"},
+      {project: "project 4", color: "blue", delay: ".4s"}
+    ];
+    $scope.fade=false;
+      $timeout(function(){
+        $scope.fade=true;
+      },400);
   })
-  .controller('workflowCTRL', function($scope){
-
+  .controller('workflowCTRL', function($scope, $timeout){
+    $scope.fade=false;
+      $timeout(function(){
+        $scope.fade=true;
+      },400);
   })
-  .controller('contactCTRL',function($scope){
-
+  .controller('contactCTRL',function($scope, $timeout){
+    $scope.fade=false;
+      $timeout(function(){
+        $scope.fade=true;
+      },400);
   });

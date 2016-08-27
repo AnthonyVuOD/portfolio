@@ -1,3 +1,9 @@
-<p>
-  SMELLO
-</p>
+<a href="#" ng-repeat="item in items"
+            style="background-color:{{item.color}};
+                   -webkit-transition-delay:{{item.delay}}"
+            ng-if="fade"
+            class="projects">
+  <div>
+    <h2>{{item.project}}</h2>
+  </div>
+</a>
