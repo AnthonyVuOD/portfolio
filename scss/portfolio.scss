@@ -3,7 +3,7 @@ body {
   margin:0;
   padding:0;
   font-size: 16px;
-  background-color: yellow;
+  background-color: #363636;
   height: 100vh;
 }
 #outerWrapper {
@@ -20,62 +20,53 @@ body {
   width:100%;
   height: 10%;
   position: absolute;
-  background-color: red;
   h3{
     position: absolute;
     bottom: -25px;
     right: 0;
-    font-size: 22px;
+    font-size: 1.5em;
     padding-right: 2%;
+    color:#e3e3e3;
+    font-family: 'Josefin Sans', sans-serif;
     span{
       font-size: 1.5em;
       padding-right: 15px;
+      font-family: 'Raleway', sans-serif;
     }
-  }
-  &.ng-enter {
-    -webkit-transition:2s linear all;
-    opacity:0;
-  }
-  &.ng-enter.ng-enter-active {
-    -webkit-transition-delay: 1.2s;
-    opacity:1;
-  }
-  &.ng-leave {
-    -webkit-transition:0.5s linear all;
-    opacity:1;
-  }
-  &.ng-leave.ng-leave-active {
-    opacity:0;
   }
 }
 #menu{
   width:100%;
   height: 10%;
-  background-color: red;
   position: absolute;
   ul{
-    position: relative;
+    position: absolute;
+    right: 0px;
+    bottom: -15px;
+    width: 96%;
     li{
-      display: inline-block;
       float: right;
       padding-right: 2%;
-      position: relative;
+      list-style-type: none;
       a {
         text-decoration: none;
-        color: black;
-        bottom:0;
+        color:#e3e3e3;
+        font-size: 1.25em;
+        font-family: 'Raleway', sans-serif;
         &:hover {
           text-decoration: underline;
         }
       }
     }
   }
+}
+.fadeHeaders{
   &.ng-enter {
-    -webkit-transition:2s linear all;
+    -webkit-transition:.75s linear all;
     opacity:0;
   }
   &.ng-enter.ng-enter-active {
-    -webkit-transition-delay: 0.5s;
+    -webkit-transition-delay: .75s;
     opacity:1;
   }
   &.ng-leave {
@@ -99,7 +90,6 @@ body {
     opacity:0;
   }
 }
-
 //HOME
 #homePhoto{
   position: relative;
@@ -170,7 +160,7 @@ body {
     opacity:0;
   }
 }
-#homeTBD{
+#homeCv{
   background-color: purple;
   &.ng-enter {
     -webkit-transition:0.65s linear all;
@@ -220,8 +210,10 @@ body {
   height: 50%;
   h2{
     position: absolute;
-    bottom: -6%;
+    font-size: 1.25em;
+    bottom: -3%;
     right:5%;
+    font-family: 'Raleway', sans-serif;
   }
 }
 //ABOUT
@@ -230,6 +222,13 @@ body {
   width:32%;
   height: 100%;
   background-color: green;
+  position: relative;
+  h2 {
+    position: absolute;
+    bottom: -2%;
+    right: 5%;
+    font-family: 'Raleway', sans-serif;
+  }
   &.ng-enter {
     -webkit-transition:0.65s linear all;
     -webkit-transform: translateX(-35px);
@@ -255,6 +254,24 @@ body {
   width: 68%;
   height: 100%;
   background-color: gray;
+  position: relative;
+  h3{
+    width: 85%;
+    top: 4%;
+    margin: 5% auto 0% auto;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.5em;
+  }
+  p{
+    width: 85%;
+    top: 10%;
+    margin: 3% auto 0% auto;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.25em;
+    span {
+      margin-left: 15px
+    }
+  }
   &.ng-enter {
     -webkit-transition:0.65s linear all;
     -webkit-transform: translateX(35px);
@@ -290,17 +307,25 @@ body {
   }
   h2 {
     position: absolute;
-    bottom: 0%;
-    right:5%;
+    bottom: -4%;
+    right:3%;
+    font-family: 'Raleway', sans-serif;
   }
 }
 
-//WORKFLOW
-#workflowPhoto {
+//CV
+#cvPhoto {
   float: left;
   width:32%;
   height: 100%;
   background-color: purple;
+  position: relative;
+  h2 {
+    position: absolute;
+    bottom: -2%;
+    right: 5%;
+    font-family: 'Raleway', sans-serif;
+  }
   &.ng-enter {
     -webkit-transition:0.65s linear all;
     -webkit-transform: translateX(-35px);
@@ -321,7 +346,7 @@ body {
     opacity:0;
   }
 }
-#workflowContent{
+#cvContent{
   float: left;
   width: 68%;
   height: 100%;
@@ -353,6 +378,13 @@ body {
   width: 32%;
   height: 100%;
   background-color: red;
+  position: relative;
+  h2 {
+    position: absolute;
+    bottom: -2%;
+    right: 5%;
+    font-family: 'Raleway', sans-serif;
+  }
   &.ng-enter {
     -webkit-transition:0.65s linear all;
     -webkit-transform: translateX(-35px);
