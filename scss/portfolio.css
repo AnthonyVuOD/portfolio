@@ -26,11 +26,11 @@ body {
     font-size: 1.5em;
     padding-right: 2%;
     color: #e3e3e3;
-    font-family: 'Josefin Sans', sans-serif; }
+    font-family: "Josefin Sans", sans-serif; }
     #header h3 span {
       font-size: 1.5em;
       padding-right: 15px;
-      font-family: 'Raleway', sans-serif; }
+      font-family: "Raleway", sans-serif; }
 
 #menu {
   width: 100%;
@@ -49,18 +49,24 @@ body {
         text-decoration: none;
         color: #e3e3e3;
         font-size: 1.25em;
-        font-family: 'Raleway', sans-serif; }
+        font-family: "Raleway", sans-serif; }
         #menu ul li a:hover {
           text-decoration: underline; }
 
 .fadeHeaders.ng-enter {
   -webkit-transition: .75s linear all;
+  -moz-transition: .75s linear all;
+  -o-transition: .75s linear all;
+  transition: .75s linear all;
   opacity: 0; }
 .fadeHeaders.ng-enter.ng-enter-active {
   -webkit-transition-delay: .75s;
   opacity: 1; }
 .fadeHeaders.ng-leave {
   -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  transition: 0.5s linear all;
   opacity: 1; }
 .fadeHeaders.ng-leave.ng-leave-active {
   opacity: 0; }
@@ -72,6 +78,9 @@ body {
   top: 10%; }
   #innerWrapper.ng-leave {
     -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
     opacity: 1; }
   #innerWrapper.ng-leave.ng-leave-active {
     opacity: 0; }
@@ -84,15 +93,25 @@ body {
   background-color: red; }
   #homePhoto.ng-enter {
     -webkit-transition: 0.65s linear all;
+    -moz-transition: 0.65s linear all;
+    -o-transition: 0.65s linear all;
+    transition: 0.65s linear all;
     -webkit-transform: translateX(-35px);
+    -moz-transform: translateX(-35px);
+    -o-transform: translateX(-35px);
     transform: translateX(-35px);
     opacity: 0; }
   #homePhoto.ng-enter.ng-enter-active {
     -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
     transform: translateX(0);
     opacity: 1; }
   #homePhoto.ng-leave {
     -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
     opacity: 1; }
   #homePhoto.ng-leave.ng-leave-active {
     opacity: 0; }
@@ -101,15 +120,25 @@ body {
   background-color: black; }
   #homeAbout.ng-enter {
     -webkit-transition: 0.65s linear all;
-    -webkit-transform: translateY(-35px);
-    transform: translateY(-35px);
+    -moz-transition: 0.65s linear all;
+    -o-transition: 0.65s linear all;
+    transition: 0.65s linear all;
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+    transform: translateY(-30px);
     opacity: 0; }
   #homeAbout.ng-enter.ng-enter-active {
     -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
     transform: translateY(0);
     opacity: 1; }
   #homeAbout.ng-leave {
     -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
     opacity: 1; }
   #homeAbout.ng-leave.ng-leave-active {
     opacity: 0; }
@@ -118,15 +147,25 @@ body {
   background-color: white; }
   #homePortfolio.ng-enter {
     -webkit-transition: 0.65s linear all;
+    -moz-transition: 0.65s linear all;
+    -o-transition: 0.65s linear all;
+    transition: 0.65s linear all;
     -webkit-transform: translate(30px, -30px);
+    -moz-transform: translate(30px, -30px);
+    -o-transform: translate(30px, -30px);
     transform: translate(30px, -30px);
     opacity: 0; }
   #homePortfolio.ng-enter.ng-enter-active {
     -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -o-transform: translate(0);
     transform: translate(0);
     opacity: 1; }
   #homePortfolio.ng-leave {
     -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
     opacity: 1; }
   #homePortfolio.ng-leave.ng-leave-active {
     opacity: 0; }
@@ -135,15 +174,25 @@ body {
   background-color: purple; }
   #homeCv.ng-enter {
     -webkit-transition: 0.65s linear all;
+    -moz-transition: 0.65s linear all;
+    -o-transition: 0.65s linear all;
+    transition: 0.65s linear all;
     -webkit-transform: translateY(30px);
+    -moz-transform: translateY(30px);
+    -o-transform: translateY(30px);
     transform: translateY(30px);
     opacity: 0; }
   #homeCv.ng-enter.ng-enter-active {
-    opacity: 1;
     -webkit-transform: translateY(0);
-    transform: translateY(0); }
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; }
   #homeCv.ng-leave {
     -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
     opacity: 1; }
   #homeCv.ng-leave.ng-leave-active {
     opacity: 0; }
@@ -152,15 +201,25 @@ body {
   background-color: blue; }
   #homeContact.ng-enter {
     -webkit-transition: 0.65s linear all;
+    -moz-transition: 0.65s linear all;
+    -o-transition: 0.65s linear all;
+    transition: 0.65s linear all;
     -webkit-transform: translate(25px, 25px);
+    -moz-transform: translate(25px, 25px);
+    -o-transform: translate(25px, 25px);
     transform: translate(25px, 25px);
     opacity: 0; }
   #homeContact.ng-enter.ng-enter-active {
-    opacity: 1;
     -webkit-transform: translate(0);
-    transform: translate(0); }
+    -moz-transform: translate(0);
+    -o-transform: translate(0);
+    transform: translate(0);
+    opacity: 1; }
   #homeContact.ng-leave {
     -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
     opacity: 1; }
   #homeContact.ng-leave.ng-leave-active {
     opacity: 0; }
@@ -170,12 +229,15 @@ body {
   float: left;
   width: 34%;
   height: 50%; }
+  .homeLinks:hover {
+    cursor: pointer; }
   .homeLinks h2 {
     position: absolute;
     font-size: 1.25em;
     bottom: -3%;
     right: 5%;
-    font-family: 'Raleway', sans-serif; }
+    font-family: "Raleway", sans-serif;
+    color: #363636; }
 
 #aboutPhoto {
   float: left;
@@ -185,20 +247,32 @@ body {
   position: relative; }
   #aboutPhoto h2 {
     position: absolute;
+    font-size: 1.5em;
     bottom: -2%;
     right: 5%;
-    font-family: 'Raleway', sans-serif; }
+    font-family: "Raleway", sans-serif;
+    color: #363636; }
   #aboutPhoto.ng-enter {
     -webkit-transition: 0.65s linear all;
+    -moz-transition: 0.65s linear all;
+    -o-transition: 0.65s linear all;
+    transition: 0.65s linear all;
     -webkit-transform: translateX(-35px);
+    -moz-transform: translateX(-35px);
+    -o-transform: translateX(-35px);
     transform: translateX(-35px);
     opacity: 0; }
   #aboutPhoto.ng-enter.ng-enter-active {
     -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
     transform: translateX(0);
     opacity: 1; }
   #aboutPhoto.ng-leave {
     -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
     opacity: 1; }
   #aboutPhoto.ng-leave.ng-leave-active {
     opacity: 0; }
@@ -207,33 +281,44 @@ body {
   float: left;
   width: 68%;
   height: 100%;
-  background-color: gray;
+  background-color: #e3e3e3;
   position: relative; }
   #aboutContent h3 {
     width: 85%;
-    top: 4%;
-    margin: 5% auto 0% auto;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 1.5em; }
+    margin: 8% auto 0% auto;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.5em;
+    color: #363636; }
   #aboutContent p {
     width: 85%;
-    top: 10%;
+    top: 12%;
     margin: 3% auto 0% auto;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 1.25em; }
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.25em;
+    color: #363636; }
     #aboutContent p span {
       margin-left: 15px; }
   #aboutContent.ng-enter {
     -webkit-transition: 0.65s linear all;
+    -moz-transition: 0.65s linear all;
+    -o-transition: 0.65s linear all;
+    transition: 0.65s linear all;
     -webkit-transform: translateX(35px);
+    -moz-transform: translateX(35px);
+    -o-transform: translateX(35px);
     transform: translateX(35px);
     opacity: 0; }
   #aboutContent.ng-enter.ng-enter-active {
     -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
     transform: translateX(0);
     opacity: 1; }
   #aboutContent.ng-leave {
     -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
     opacity: 1; }
   #aboutContent.ng-leave.ng-leave-active {
     opacity: 0; }
@@ -245,6 +330,9 @@ body {
   position: relative; }
   .projects.ng-enter {
     -webkit-transition: .55s linear all;
+    -moz-transition: .55s linear all;
+    -o-transition: .55s linear all;
+    transition: .55s linear all;
     opacity: 0; }
   .projects.ng-enter.ng-enter-active {
     opacity: 1; }
@@ -252,7 +340,9 @@ body {
     position: absolute;
     bottom: -4%;
     right: 3%;
-    font-family: 'Raleway', sans-serif; }
+    font-family: "Raleway", sans-serif;
+    color: #363636;
+    font-size: 1.5em; }
 
 #cvPhoto {
   float: left;
@@ -264,18 +354,30 @@ body {
     position: absolute;
     bottom: -2%;
     right: 5%;
-    font-family: 'Raleway', sans-serif; }
+    font-family: "Raleway", sans-serif;
+    color: #363636;
+    font-size: 1.5em; }
   #cvPhoto.ng-enter {
     -webkit-transition: 0.65s linear all;
+    -moz-transition: 0.65s linear all;
+    -o-transition: 0.65s linear all;
+    transition: 0.65s linear all;
     -webkit-transform: translateX(-35px);
+    -moz-transform: translateX(-35px);
+    -o-transform: translateX(-35px);
     transform: translateX(-35px);
     opacity: 0; }
   #cvPhoto.ng-enter.ng-enter-active {
     -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
     transform: translateX(0);
     opacity: 1; }
   #cvPhoto.ng-leave {
     -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
     opacity: 1; }
   #cvPhoto.ng-leave.ng-leave-active {
     opacity: 0; }
@@ -284,18 +386,28 @@ body {
   float: left;
   width: 68%;
   height: 100%;
-  background-color: black; }
+  background-color: #e3e3e3; }
   #cvContent.ng-enter {
     -webkit-transition: 0.65s linear all;
+    -moz-transition: 0.65s linear all;
+    -o-transition: 0.65s linear all;
+    transition: 0.65s linear all;
     -webkit-transform: translateX(35px);
+    -moz-transform: translateX(35px);
+    -o-transform: translateX(35px);
     transform: translateX(35px);
     opacity: 0; }
   #cvContent.ng-enter.ng-enter-active {
     -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
     transform: translateX(0);
     opacity: 1; }
   #cvContent.ng-leave {
     -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
     opacity: 1; }
   #cvContent.ng-leave.ng-leave-active {
     opacity: 0; }
@@ -310,18 +422,30 @@ body {
     position: absolute;
     bottom: -2%;
     right: 5%;
-    font-family: 'Raleway', sans-serif; }
+    font-family: "Raleway", sans-serif;
+    color: #363636;
+    font-size: 1.5em; }
   #contactPhoto.ng-enter {
     -webkit-transition: 0.65s linear all;
+    -moz-transition: 0.65s linear all;
+    -o-transition: 0.65s linear all;
+    transition: 0.65s linear all;
     -webkit-transform: translateX(-35px);
+    -moz-transform: translateX(-35px);
+    -o-transform: translateX(-35px);
     transform: translateX(-35px);
     opacity: 0; }
   #contactPhoto.ng-enter.ng-enter-active {
     -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
     transform: translateX(0);
     opacity: 1; }
   #contactPhoto.ng-leave {
     -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
     opacity: 1; }
   #contactPhoto.ng-leave.ng-leave-active {
     opacity: 0; }
@@ -330,18 +454,28 @@ body {
   float: left;
   width: 68%;
   height: 100%;
-  background-color: green; }
+  background-color: #e3e3e3; }
   #contactContent.ng-enter {
     -webkit-transition: 0.65s linear all;
+    -moz-transition: 0.65s linear all;
+    -o-transition: 0.65s linear all;
+    transition: 0.65s linear all;
     -webkit-transform: translateX(35px);
+    -moz-transform: translateX(35px);
+    -o-transform: translateX(35px);
     transform: translateX(35px);
     opacity: 0; }
   #contactContent.ng-enter.ng-enter-active {
     -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
     transform: translateX(0);
     opacity: 1; }
   #contactContent.ng-leave {
     -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
     opacity: 1; }
   #contactContent.ng-leave.ng-leave-active {
     opacity: 0; }

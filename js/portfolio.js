@@ -31,16 +31,21 @@ var app = angular
     $rootScope.$on('$routeChangeSuccess', function(){
       $scope.landingPage = $location.path() === '/home';
     });
+
     $scope.fade=false;
     $timeout(function(){
       $scope.fade=true;
     },200);
   })
-  .controller('homeCTRL', function($scope, $timeout){
+  .controller('homeCTRL', function($scope, $timeout, $location){
     $scope.fade=false;
     $timeout(function(){
       $scope.fade=true;
-    },550);
+    },500);
+
+    $scope.changePath = function(path) {
+      $location.path (path);
+    };
   })
   .controller('aboutCTRL', function($scope, $timeout){
     $scope.fade=false;
@@ -55,6 +60,7 @@ var app = angular
       {project: "How Much House?", color: "red", delay: ".3s"},
       {project: "Vu Realty", color: "blue", delay: ".4s"}
     ];
+    
     $scope.fade=false;
     $timeout(function(){
       $scope.fade=true;

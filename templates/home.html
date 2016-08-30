@@ -1,27 +1,19 @@
 <div id="homePhoto" ng-if="fade">
-  <img src="" />
+  
 </div>
 
-<a href="#/about">
-  <div id="homeAbout" class="homeLinks" ng-if="fade">
-    <h2>About</h2>
-  </div>
-</a>
+<div id="homeAbout" class="homeLinks" ng-if="fade" ng-click="changePath('/about')">
+  <h2>About</h2>
+</div>
 
-<a href="#/portfolio">
-  <div id="homePortfolio"  class="homeLinks" ng-if="fade">
-    <h2>Portfolio</h2>
-  </div>
-</a>
+<div id="homePortfolio" class="homeLinks" ng-if="fade" ng-click="changePath('/portfolio')">
+  <h2>Portfolio</h2>
+</div>
 
-<a href="#/cv">
-  <div id="homeCv" class="homeLinks" ng-if="fade">
-    <h2>Curriculum Vitae</h2>
-  </div>
-</a>
+<div id="homeCv" class="homeLinks" ng-if="fade" ng-click="changePath('/cv')">
+  <h2>Curriculum Vitae</h2>
+</div>
 
-<a href="#/contact">
-  <div id="homeContact" class="homeLinks" ng-if="fade">
-    <h2>Contact</h2>
-  </div>
-</a>
+<div id="homeContact" class="homeLinks" ng-if="fade" ng-click="changePath('/contact')">
+  <h2>Contact</h2>
+</div>

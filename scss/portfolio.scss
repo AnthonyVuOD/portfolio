@@ -1,9 +1,15 @@
+//////////////////////////////////////////////VARIABLES//////////////////////////
+$primary-color: #363636;
+$secondary-color: #e3e3e3;
+$primary-font: 'Raleway', sans-serif;
+$secondary-font: 'Josefin Sans', sans-serif;
+
 //INDEX
 body {
   margin:0;
   padding:0;
   font-size: 16px;
-  background-color: #363636;
+  background-color: $primary-color;
   height: 100vh;
 }
 #outerWrapper {
@@ -26,12 +32,12 @@ body {
     right: 0;
     font-size: 1.5em;
     padding-right: 2%;
-    color:#e3e3e3;
-    font-family: 'Josefin Sans', sans-serif;
+    color:$secondary-color;
+    font-family: $secondary-font;
     span{
       font-size: 1.5em;
       padding-right: 15px;
-      font-family: 'Raleway', sans-serif;
+      font-family: $primary-font;
     }
   }
 }
@@ -50,9 +56,9 @@ body {
       list-style-type: none;
       a {
         text-decoration: none;
-        color:#e3e3e3;
+        color:$secondary-color;
         font-size: 1.25em;
-        font-family: 'Raleway', sans-serif;
+        font-family: $primary-font;
         &:hover {
           text-decoration: underline;
         }
@@ -63,6 +69,10 @@ body {
 .fadeHeaders{
   &.ng-enter {
     -webkit-transition:.75s linear all;
+    -moz-transition:.75s linear all;
+    -o-transition:.75s linear all;
+    transition:.75s linear all;
+
     opacity:0;
   }
   &.ng-enter.ng-enter-active {
@@ -71,6 +81,10 @@ body {
   }
   &.ng-leave {
     -webkit-transition:0.5s linear all;
+    -moz-transition:0.5s linear all;
+    -o-transition:0.5s linear all;
+    transition:0.5s linear all;
+
     opacity:1;
   }
   &.ng-leave.ng-leave-active {
@@ -84,13 +98,17 @@ body {
   top:10%;
   &.ng-leave {
     -webkit-transition:0.5s linear all;
+    -moz-transition:0.5s linear all;
+    -o-transition:0.5s linear all;
+    transition:0.5s linear all;
+
     opacity:1;
   }
   &.ng-leave.ng-leave-active {
     opacity:0;
   }
 }
-//HOME
+/////////////////////////////////////////HOME//////////////////////////////
 #homePhoto{
   position: relative;
   float: left;
@@ -98,19 +116,33 @@ body {
   width:32%;
   background-color: red;
   &.ng-enter {
-    -webkit-transition:0.65s linear all;
+    -webkit-transition: 0.65s linear all;
+    -moz-transition: 0.65s linear all;
+    -o-transition: 0.65s linear all;
+    transition: 0.65s linear all;
+
     -webkit-transform: translateX(-35px);
+    -moz-transform: translateX(-35px);
+    -o-transform: translateX(-35px);
     transform: translateX(-35px);
+
     opacity:0;
   }
 
   &.ng-enter.ng-enter-active {
     -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
     transform: translateX(0);
+
     opacity:1;
   }
   &.ng-leave {
     -webkit-transition:0.5s linear all;
+    -moz-transition:0.5s linear all;
+    -o-transition:0.5s linear all;
+    transition:0.5s linear all;
+
     opacity:1;
   }
   &.ng-leave.ng-leave-active {
@@ -119,20 +151,46 @@ body {
 }
 #homeAbout{
   background-color: black;
+  // position: relative;
+  // float: left;
+  // width:34%;
+  // height: 50%;
+  // h2{
+  //   position: absolute;
+  //   font-size: 1.25em;
+  //   bottom: -3%;
+  //   right:5%;
+  //   font-family: 'Raleway', sans-serif;
+  // }
   &.ng-enter {
     -webkit-transition:0.65s linear all;
-    -webkit-transform: translateY(-35px);
-    transform: translateY(-35px);
+    -moz-transition:0.65s linear all;
+    -o-transition:0.65s linear all;
+    transition:0.65s linear all;
+
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+    transform: translateY(-30px);
+
     opacity:0;
   }
 
   &.ng-enter.ng-enter-active {
     -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
     transform: translateY(0);
+
     opacity:1;
+
   }
   &.ng-leave {
     -webkit-transition:0.5s linear all;
+    -moz-transition:0.5s linear all;
+    -o-transition:0.5s linear all;
+    transition:0.5s linear all;
+
     opacity:1;
   }
   &.ng-leave.ng-leave-active {
@@ -141,19 +199,44 @@ body {
 }
 #homePortfolio{
   background-color: white;
+  // position: relative;
+  // float: left;
+  // width:34%;
+  // height: 50%;
+  // h2{
+  //   position: absolute;
+  //   font-size: 1.25em;
+  //   bottom: -3%;
+  //   right:5%;
+  //   font-family: 'Raleway', sans-serif;
+  // }
   &.ng-enter {
     -webkit-transition:0.65s linear all;
+    -moz-transition:0.65s linear all;
+    -o-transition:0.65s linear all;
+    transition:0.65s linear all;
+
     -webkit-transform: translate(30px, -30px);
+    -moz-transform: translate(30px, -30px);
+    -o-transform: translate(30px, -30px);
     transform: translate(30px, -30px);
+
     opacity:0;
   }
   &.ng-enter.ng-enter-active {
     -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -o-transform: translate(0);
     transform: translate(0);
+
     opacity:1;
   }
   &.ng-leave {
     -webkit-transition:0.5s linear all;
+    -moz-transition:0.5s linear all;
+    -o-transition:0.5s linear all;
+    transition:0.5s linear all;
+
     opacity:1;
   }
   &.ng-leave.ng-leave-active {
@@ -162,20 +245,46 @@ body {
 }
 #homeCv{
   background-color: purple;
+  // position: relative;
+  // float: left;
+  // width:34%;
+  // height: 50%;
+  // h2{
+  //   position: absolute;
+  //   font-size: 1.25em;
+  //   bottom: -3%;
+  //   right:5%;
+  //   font-family: 'Raleway', sans-serif;
+  // }
   &.ng-enter {
     -webkit-transition:0.65s linear all;
+    -moz-transition:0.65s linear all;
+    -o-transition:0.65s linear all;
+    transition:0.65s linear all;
+
     -webkit-transform: translateY(30px);
+    -moz-transform: translateY(30px);
+    -o-transform: translateY(30px);
     transform: translateY(30px);
+
     opacity:0;
   }
 
   &.ng-enter.ng-enter-active {
-    opacity:1;
     -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
     transform: translateY(0);
+
+    opacity:1;
+
   }
   &.ng-leave {
     -webkit-transition:0.5s linear all;
+    -moz-transition:0.5s linear all;
+    -o-transition:0.5s linear all;
+    transition:0.5s linear all;
+
     opacity:1;
   }
   &.ng-leave.ng-leave-active {
@@ -184,19 +293,44 @@ body {
 }
 #homeContact{
   background-color: blue;
+  // position: relative;
+  // float: left;
+  // width:34%;
+  // height: 50%;
+  // h2{
+  //   position: absolute;
+  //   font-size: 1.25em;
+  //   bottom: -3%;
+  //   right:5%;
+  //   font-family: 'Raleway', sans-serif;
+  // }
   &.ng-enter {
     -webkit-transition:0.65s linear all;
+    -moz-transition:0.65s linear all;
+    -o-transition:0.65s linear all;
+    transition:0.65s linear all;
+
     -webkit-transform: translate(25px, 25px);
+    -moz-transform: translate(25px, 25px);
+    -o-transform: translate(25px, 25px);
     transform: translate(25px, 25px);
+
     opacity:0;
   }
   &.ng-enter.ng-enter-active {
-    opacity:1;
     -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -o-transform: translate(0);
     transform: translate(0);
+
+    opacity:1;
   }
   &.ng-leave {
     -webkit-transition:0.5s linear all;
+    -moz-transition:0.5s linear all;
+    -o-transition:0.5s linear all;
+    transition:0.5s linear all;
+
     opacity:1;
   }
   &.ng-leave.ng-leave-active {
@@ -208,15 +342,19 @@ body {
   float: left;
   width:34%;
   height: 50%;
+  &:hover{
+    cursor: pointer;
+  }
   h2{
     position: absolute;
     font-size: 1.25em;
     bottom: -3%;
     right:5%;
-    font-family: 'Raleway', sans-serif;
+    font-family: $primary-font;
+    color: $primary-color;
   }
 }
-//ABOUT
+///////////////////////////////////////ABOUT/////////////////////////////////////
 #aboutPhoto {
   float: left;
   width:32%;
@@ -225,24 +363,40 @@ body {
   position: relative;
   h2 {
     position: absolute;
+    font-size: 1.5em;
     bottom: -2%;
     right: 5%;
-    font-family: 'Raleway', sans-serif;
+    font-family: $primary-font;
+    color: $primary-color;
   }
   &.ng-enter {
     -webkit-transition:0.65s linear all;
+    -moz-transition:0.65s linear all;
+    -o-transition:0.65s linear all;
+    transition:0.65s linear all;
+
     -webkit-transform: translateX(-35px);
+    -moz-transform: translateX(-35px);
+    -o-transform: translateX(-35px);
     transform: translateX(-35px);
+
     opacity:0;
   }
 
   &.ng-enter.ng-enter-active {
     -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
     transform: translateX(0);
+
     opacity:1;
   }
   &.ng-leave {
     -webkit-transition:0.5s linear all;
+    -moz-transition:0.5s linear all;
+    -o-transition:0.5s linear all;
+    transition:0.5s linear all;
+
     opacity:1;
   }
   &.ng-leave.ng-leave-active {
@@ -253,46 +407,61 @@ body {
   float: left;
   width: 68%;
   height: 100%;
-  background-color: gray;
+  background-color:$secondary-color;
   position: relative;
   h3{
     width: 85%;
-    top: 4%;
-    margin: 5% auto 0% auto;
-    font-family: 'Josefin Sans', sans-serif;
+    margin: 8% auto 0% auto;
+    font-family: $secondary-font;
     font-size: 1.5em;
+    color: $primary-color;
   }
   p{
     width: 85%;
-    top: 10%;
+    top: 12%;
     margin: 3% auto 0% auto;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: $secondary-font;
     font-size: 1.25em;
+    color: $primary-color;
     span {
       margin-left: 15px
     }
   }
   &.ng-enter {
     -webkit-transition:0.65s linear all;
+    -moz-transition:0.65s linear all;
+    -o-transition:0.65s linear all;
+    transition:0.65s linear all;
+
     -webkit-transform: translateX(35px);
+    -moz-transform: translateX(35px);
+    -o-transform: translateX(35px);
     transform: translateX(35px);
+
     opacity:0;
   }
 
   &.ng-enter.ng-enter-active {
     -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
     transform: translateX(0);
+
     opacity:1;
   }
   &.ng-leave {
     -webkit-transition:0.5s linear all;
+    -moz-transition:0.5s linear all;
+    -o-transition:0.5s linear all;
+    transition:0.5s linear all;
+
     opacity:1;
   }
   &.ng-leave.ng-leave-active {
     opacity:0;
   }
 }
-//PORTFOLIO
+///////////////////////////////////////PORTFOLIO/////////////////////////////////////
 .projects {
   float: left;
   width: 50%;
@@ -300,6 +469,10 @@ body {
   position: relative;
   &.ng-enter {
     -webkit-transition:.55s linear all;
+    -moz-transition:.55s linear all;
+    -o-transition:.55s linear all;
+    transition:.55s linear all;
+
     opacity:0;
   }
   &.ng-enter.ng-enter-active {
@@ -309,11 +482,13 @@ body {
     position: absolute;
     bottom: -4%;
     right:3%;
-    font-family: 'Raleway', sans-serif;
+    font-family: $primary-font;
+    color: $primary-color;
+    font-size: 1.5em;
   }
 }
 
-//CV
+///////////////////////////////////////CV/////////////////////////////////////
 #cvPhoto {
   float: left;
   width:32%;
@@ -324,22 +499,38 @@ body {
     position: absolute;
     bottom: -2%;
     right: 5%;
-    font-family: 'Raleway', sans-serif;
+    font-family: $primary-font;
+    color: $primary-color;
+    font-size: 1.5em;
   }
   &.ng-enter {
     -webkit-transition:0.65s linear all;
+    -moz-transition:0.65s linear all;
+    -o-transition:0.65s linear all;
+    transition:0.65s linear all;
+
     -webkit-transform: translateX(-35px);
+    -moz-transform: translateX(-35px);
+    -o-transform: translateX(-35px);
     transform: translateX(-35px);
+
     opacity:0;
   }
 
   &.ng-enter.ng-enter-active {
     -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
     transform: translateX(0);
+
     opacity:1;
   }
   &.ng-leave {
     -webkit-transition:0.5s linear all;
+    -moz-transition:0.5s linear all;
+    -o-transition:0.5s linear all;
+    transition:0.5s linear all;
+
     opacity:1;
   }
   &.ng-leave.ng-leave-active {
@@ -350,21 +541,35 @@ body {
   float: left;
   width: 68%;
   height: 100%;
-  background-color: black;
+  background-color:$secondary-color;
   &.ng-enter {
     -webkit-transition:0.65s linear all;
+    -moz-transition:0.65s linear all;
+    -o-transition:0.65s linear all;
+    transition:0.65s linear all;
+
     -webkit-transform: translateX(35px);
+    -moz-transform: translateX(35px);
+    -o-transform: translateX(35px);
     transform: translateX(35px);
+
     opacity:0;
   }
 
   &.ng-enter.ng-enter-active {
     -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
     transform: translateX(0);
+
     opacity:1;
   }
   &.ng-leave {
     -webkit-transition:0.5s linear all;
+    -moz-transition:0.5s linear all;
+    -o-transition:0.5s linear all;
+    transition:0.5s linear all;
+
     opacity:1;
   }
   &.ng-leave.ng-leave-active {
@@ -372,7 +577,7 @@ body {
   }
 }
 
-// CONTACT
+/////////////////////////////////////// CONTACT/////////////////////////////////////
 #contactPhoto {
   float: left;
   width: 32%;
@@ -383,22 +588,38 @@ body {
     position: absolute;
     bottom: -2%;
     right: 5%;
-    font-family: 'Raleway', sans-serif;
+    font-family: $primary-font;
+    color: $primary-color;
+    font-size: 1.5em;
   }
   &.ng-enter {
     -webkit-transition:0.65s linear all;
+    -moz-transition:0.65s linear all;
+    -o-transition:0.65s linear all;
+    transition:0.65s linear all;
+
     -webkit-transform: translateX(-35px);
+    -moz-transform: translateX(-35px);
+    -o-transform: translateX(-35px);
     transform: translateX(-35px);
+
     opacity:0;
   }
 
   &.ng-enter.ng-enter-active {
     -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
     transform: translateX(0);
+
     opacity:1;
   }
   &.ng-leave {
     -webkit-transition:0.5s linear all;
+    -moz-transition:0.5s linear all;
+    -o-transition:0.5s linear all;
+    transition:0.5s linear all;
+
     opacity:1;
   }
   &.ng-leave.ng-leave-active {
@@ -409,21 +630,35 @@ body {
   float: left;
   width: 68%;
   height: 100%;
-  background-color: green;
+  background-color:$secondary-color;
   &.ng-enter {
     -webkit-transition:0.65s linear all;
+    -moz-transition:0.65s linear all;
+    -o-transition:0.65s linear all;
+    transition:0.65s linear all;
+
     -webkit-transform: translateX(35px);
+    -moz-transform: translateX(35px);
+    -o-transform: translateX(35px);
     transform: translateX(35px);
+
     opacity:0;
   }
 
   &.ng-enter.ng-enter-active {
     -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
     transform: translateX(0);
+
     opacity:1;
   }
   &.ng-leave {
     -webkit-transition:0.5s linear all;
+    -moz-transition:0.5s linear all;
+    -o-transition:0.5s linear all;
+    transition:0.5s linear all;
+
     opacity:1;
   }
   &.ng-leave.ng-leave-active {
