@@ -60,7 +60,7 @@ var app = angular
       {project: "How Much House?", color: "red", delay: ".3s"},
       {project: "Vu Realty", color: "blue", delay: ".4s"}
     ];
-    
+
     $scope.fade=false;
     $timeout(function(){
       $scope.fade=true;
@@ -72,7 +72,14 @@ var app = angular
       $scope.fade=true;
     },400);
   })
-  .controller('contactCTRL',function($scope, $timeout){
+  .controller('contactCTRL', function($scope, $timeout){
+    $scope.contactItems = [
+      {link:'https://www.linkedin.com/in/anthony-vu-257a417?trk=nav_responsive_tab_profile', photo:'photos/linkedInicon.png'},
+      {link:'https://github.com/AnthonyVuOD', photo:'photos/githubIcon.png'},
+      {link:'https://www.facebook.com/profile.php?id=2007303', photo:'photos/facebookIcon.png'},
+      {link:'mailto:AnthonyVuOD@gmail.com', photo:'photos/gmailIcon.png'}
+    ];
+
     $scope.fade=false;
     $timeout(function(){
       $scope.fade=true;

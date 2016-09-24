@@ -243,7 +243,10 @@ body {
   float: left;
   width: 32%;
   height: 100%;
-  background-color: green;
+  background-image: url("../photos/aboutPhoto2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
   position: relative; }
   #aboutPhoto h2 {
     position: absolute;
@@ -251,7 +254,7 @@ body {
     bottom: -2%;
     right: 5%;
     font-family: "Raleway", sans-serif;
-    color: #363636; }
+    color: #e3e3e3; }
   #aboutPhoto.ng-enter {
     -webkit-transition: 0.65s linear all;
     -moz-transition: 0.65s linear all;
@@ -454,6 +457,7 @@ body {
   float: left;
   width: 68%;
   height: 100%;
+  position: relative;
   background-color: #e3e3e3; }
   #contactContent.ng-enter {
     -webkit-transition: 0.65s linear all;
@@ -479,5 +483,21 @@ body {
     opacity: 1; }
   #contactContent.ng-leave.ng-leave-active {
     opacity: 0; }
+  #contactContent div {
+    position: relative;
+    height: 60px;
+    width: 400px;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%); }
+    #contactContent div .socialMediaLinks {
+      display: block;
+      height: 60px;
+      width: 25%;
+      position: relative;
+      float: left;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto 100%; }
 
 /*# sourceMappingURL=portfolio.css.map */

@@ -3,5 +3,12 @@
 </div>
 
 <div id="contactContent" ng-if="fade">
-
+  <div>
+    <a ng-repeat="contactItem in contactItems"
+       href="{{contactItem.link}}"
+       style= "background-image: url({{contactItem.photo}});" 
+       class="socialMediaLinks"
+       >
+    </a>
+  </div>
 </div>

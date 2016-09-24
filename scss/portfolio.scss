@@ -1,9 +1,9 @@
 //////////////////////////////////////////////VARIABLES//////////////////////////
-$primary-color: #363636;
-$secondary-color: #e3e3e3;
+$primary-color: #363636; //dark gray
+$secondary-color: #e3e3e3; //white
 $primary-font: 'Raleway', sans-serif;
 $secondary-font: 'Josefin Sans', sans-serif;
-
+///////////////////////////////////////////////////////////////
 //INDEX
 body {
   margin:0;
@@ -359,7 +359,10 @@ body {
   float: left;
   width:32%;
   height: 100%;
-  background-color: green;
+  background-image: url('../photos/aboutPhoto2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
   position: relative;
   h2 {
     position: absolute;
@@ -367,7 +370,7 @@ body {
     bottom: -2%;
     right: 5%;
     font-family: $primary-font;
-    color: $primary-color;
+    color: $secondary-color;
   }
   &.ng-enter {
     -webkit-transition:0.65s linear all;
@@ -630,6 +633,7 @@ body {
   float: left;
   width: 68%;
   height: 100%;
+  position: relative;
   background-color:$secondary-color;
   &.ng-enter {
     -webkit-transition:0.65s linear all;
@@ -663,5 +667,25 @@ body {
   }
   &.ng-leave.ng-leave-active {
     opacity:0;
+  }
+  div {
+    // background-color: yellow;
+    position: relative;
+    height: 60px;
+    width:400px;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    .socialMediaLinks {
+      display: block;
+      height: 60px;
+      width: 25%;
+      position: relative;
+      float: left;
+      // margin: 0% 2.5% 0% 2.5%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+    }
   }
 }
