@@ -55,10 +55,10 @@ var app = angular
   })
   .controller('portfolioCTRL', function($scope, $timeout){
     $scope.items = [
-      {project: "Greenbelt Climbing Routes", color: "purple", delay: ".1s"},
-      {project: "Travis Perkins Photography", color: "green", delay: ".2s"},
-      {project: "How Much House?", color: "red", delay: ".3s"},
-      {project: "Vu Realty", color: "blue", delay: ".4s"}
+      {project: "Greenbelt Climbing Routes", link:"https://anthonyvuod.github.io/GreenbeltClimbingRoutes/", delay: ".1s", photo:"photos/greenbeltSS.png"},
+      {project: "Travis Perkins Photography", link:"https://anthonyvuod.github.io/TravisPerkinsPhotography/", delay: ".2s", photo:"photos/travisPerkinsSS2.png"},
+      {project: "How Much House?", link:"https://anthonyvuod.github.io/HowMuchHouse/", delay: ".3s", photo:"photos/houseSS2.png"},
+      {project: "Vu Properties", link:"https://anthonyvuod.github.io/VuProperties/", delay: ".4s", photo:"photos/vuPropertiesSS2.png"}
     ];
 
     $scope.fade=false;
@@ -77,7 +77,7 @@ var app = angular
       {link:'https://www.linkedin.com/in/anthony-vu-257a417?trk=nav_responsive_tab_profile', photo:'photos/linkedInicon.png'},
       {link:'https://github.com/AnthonyVuOD', photo:'photos/githubIcon.png'},
       {link:'https://www.facebook.com/profile.php?id=2007303', photo:'photos/facebookIcon.png'},
-      {link:'mailto:AnthonyVuOD@gmail.com', photo:'photos/gmailIcon.png'}
+      {link:'mailto:AnthonyVuOD@gmail.com', photo:'photos/gmailSquareIcon.png'}
     ];
 
     $scope.fade=false;

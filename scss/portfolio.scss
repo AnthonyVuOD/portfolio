@@ -1,16 +1,25 @@
-//////////////////////////////////////////////VARIABLES//////////////////////////
+//////////////////////////////////////////////VARIABLES/////////////////////////
 $primary-color: #363636; //dark gray
 $secondary-color: #e3e3e3; //white
 $primary-font: 'Raleway', sans-serif;
 $secondary-font: 'Josefin Sans', sans-serif;
-///////////////////////////////////////////////////////////////
-//INDEX
+////////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////INDEX////////////////////
 body {
   margin:0;
   padding:0;
   font-size: 16px;
   background-color: $primary-color;
   height: 100vh;
+  #copywrite{
+    position: absolute;
+    top: 89%;
+    right: 6%;
+    color: $secondary-color;
+    font-family: $secondary-font;
+  }
 }
 #outerWrapper {
   position: absolute;
@@ -108,13 +117,14 @@ body {
     opacity:0;
   }
 }
-/////////////////////////////////////////HOME//////////////////////////////
+///////////////////////////////////////HOME/////////////////////////////////////
 #homePhoto{
   position: relative;
   float: left;
-  height:100%;
-  width:32%;
+  height:99.8%;
+  width:33%;
   background-color: red;
+  margin: 1px 1px 1px 1px;
   &.ng-enter {
     -webkit-transition: 0.65s linear all;
     -moz-transition: 0.65s linear all;
@@ -340,8 +350,9 @@ body {
 .homeLinks{
   position: relative;
   float: left;
-  width:34%;
-  height: 50%;
+  width:33%;
+  height: 49.75%;
+  margin: 1px 1px 1px 1px;
   &:hover{
     cursor: pointer;
   }
@@ -354,7 +365,7 @@ body {
     color: $primary-color;
   }
 }
-///////////////////////////////////////ABOUT/////////////////////////////////////
+//////////////////////////////////////ABOUT/////////////////////////////////////
 #aboutPhoto {
   float: left;
   width:32%;
@@ -362,7 +373,7 @@ body {
   background-image: url('../photos/aboutPhoto2.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: auto 100%;
+  background-size: cover;
   position: relative;
   h2 {
     position: absolute;
@@ -408,26 +419,27 @@ body {
 }
 #aboutContent{
   float: left;
-  width: 68%;
+  width: 67%;
   height: 100%;
   background-color:$secondary-color;
   position: relative;
+  margin: 0px 0px 0px 2px;
   h3{
-    width: 85%;
+    width: 80%;
     margin: 8% auto 0% auto;
     font-family: $secondary-font;
     font-size: 1.5em;
     color: $primary-color;
+    position: relative;
   }
   p{
-    width: 85%;
-    top: 12%;
-    margin: 3% auto 0% auto;
+    width: 80%;
+    margin: 4% auto;
     font-family: $secondary-font;
     font-size: 1.25em;
     color: $primary-color;
     span {
-      margin-left: 15px
+      margin-left: 20px
     }
   }
   &.ng-enter {
@@ -467,9 +479,13 @@ body {
 ///////////////////////////////////////PORTFOLIO/////////////////////////////////////
 .projects {
   float: left;
-  width: 50%;
-  height: 50%;
+  width: 49.5%;
+  height: 49.5%;
   position: relative;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size:cover;
+  margin: 1px 1px 1px 1px;
   &.ng-enter {
     -webkit-transition:.55s linear all;
     -moz-transition:.55s linear all;
@@ -483,11 +499,12 @@ body {
   }
   h2 {
     position: absolute;
-    bottom: -4%;
-    right:3%;
+    bottom: -7%;
+    right:1.5%;
     font-family: $primary-font;
-    color: $primary-color;
+    color: $secondary-color;
     font-size: 1.5em;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   }
 }
 
@@ -542,9 +559,11 @@ body {
 }
 #cvContent{
   float: left;
-  width: 68%;
+  width: 67%;
   height: 100%;
   background-color:$secondary-color;
+  margin: 0px 0px 0px 2px;
+  position: relative;
   &.ng-enter {
     -webkit-transition:0.65s linear all;
     -moz-transition:0.65s linear all;
@@ -577,6 +596,63 @@ body {
   }
   &.ng-leave.ng-leave-active {
     opacity:0;
+  }
+  #outerDivCV {
+    width: 95%;
+    height: 90%;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: $secondary-font;
+    font-size: 1.25em;
+    color: $primary-color;
+    .innerDivCV {
+      float: left;
+      width: 50%;
+      height: 42%;
+      text-align: center;
+      h2{
+        font-family: $secondary-font;
+        font-size: 1.5em;
+        color: $primary-color;
+      }
+      table{
+        // border: 1px solid black;
+        width:92.5%;
+        margin: -4% auto;
+        .leftColumn {
+          text-align: left;
+        }
+        .rightColumn {
+          text-align: right;
+        }
+        span{
+          color: black;
+          font-weight: bolder;
+        }
+      }
+    }
+    .innerDivCValt {
+      float: left;
+      width: 100%;
+      height: 58%;
+      text-align: center;
+      h2{
+        font-family: $secondary-font;
+        font-size: 1.5em;
+        color: $primary-color;
+      }
+      table{
+        // border: 1px solid black;
+        width: 50%;
+        margin: -4% auto;
+        ul {
+          list-style-type: none;
+          text-align: left;
+        }
+      }
+    }
   }
 }
 
@@ -631,10 +707,11 @@ body {
 }
 #contactContent {
   float: left;
-  width: 68%;
+  width: 67%;
   height: 100%;
   position: relative;
   background-color:$secondary-color;
+  margin: 0px 0px 0px 2px;
   &.ng-enter {
     -webkit-transition:0.65s linear all;
     -moz-transition:0.65s linear all;
@@ -686,6 +763,14 @@ body {
       background-position: center;
       background-repeat: no-repeat;
       background-size: auto 100%;
+      -webkit-filter: brightness(75%); /* Chrome, Safari, Opera */
+      filter: brightness(75%);
+      // -webkit-transition: 1s; /* Safari */
+      // transition: 1s;
+      &:hover {
+        -webkit-filter: brightness(100%); /* Chrome, Safari, Opera */
+        filter: brightness(100%);
+      }
     }
   }
 }

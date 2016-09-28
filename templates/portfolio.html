@@ -1,8 +1,10 @@
-<a href="#" ng-repeat="item in items"
-            style="background-color:{{item.color}};
-                   -webkit-transition-delay:{{item.delay}};"
-            ng-if="fade"
-            class="projects">
+<a  ng-repeat="item in items"
+    style="background-image: url({{item.photo}});
+          -webkit-transition-delay:{{item.delay}};"
+    ng-if="fade"
+    class="projects"
+    href="{{item.link}}"
+    target="_blank">
   <div>
     <h2>{{item.project}}</h2>
   </div>
