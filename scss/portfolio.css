@@ -124,7 +124,10 @@ body {
     opacity: 0; }
 
 #homeAbout {
-  background-color: black; }
+  background-image: url(../photos/rope3.png);
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: cover; }
   #homeAbout.ng-enter {
     -webkit-transition: 0.65s linear all;
     -moz-transition: 0.65s linear all;
@@ -151,7 +154,10 @@ body {
     opacity: 0; }
 
 #homePortfolio {
-  background-color: white; }
+  background-image: url(../photos/computer2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
   #homePortfolio.ng-enter {
     -webkit-transition: 0.65s linear all;
     -moz-transition: 0.65s linear all;
@@ -178,7 +184,10 @@ body {
     opacity: 0; }
 
 #homeCv {
-  background-color: purple; }
+  background-image: url(../photos/guitar.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
   #homeCv.ng-enter {
     -webkit-transition: 0.65s linear all;
     -moz-transition: 0.65s linear all;
@@ -241,11 +250,11 @@ body {
     cursor: pointer; }
   .homeLinks h2 {
     position: absolute;
-    font-size: 1.25em;
+    font-size: 1.5em;
     bottom: -3%;
     right: 5%;
     font-family: "Raleway", sans-serif;
-    color: #363636; }
+    color: black; }
 
 #aboutPhoto {
   float: left;
@@ -310,6 +319,11 @@ body {
     color: #363636; }
     #aboutContent p span {
       margin-left: 20px; }
+  #aboutContent img {
+    width: 32%;
+    height: auto;
+    float: right;
+    margin-right: 15%; }
   #aboutContent.ng-enter {
     -webkit-transition: 0.65s linear all;
     -moz-transition: 0.65s linear all;
@@ -443,12 +457,13 @@ body {
     #cvContent #outerDivCV .innerDivCV {
       float: left;
       width: 50%;
-      height: 42%;
+      height: 40%;
       text-align: center; }
       #cvContent #outerDivCV .innerDivCV h2 {
         font-family: "Josefin Sans", sans-serif;
         font-size: 1.5em;
-        color: #363636; }
+        color: #363636;
+        text-decoration: underline; }
       #cvContent #outerDivCV .innerDivCV table {
         width: 92.5%;
         margin: -4% auto; }
@@ -462,24 +477,40 @@ body {
     #cvContent #outerDivCV .innerDivCValt {
       float: left;
       width: 100%;
-      height: 58%;
-      text-align: center; }
+      height: 60%;
+      text-align: center;
+      position: relative; }
       #cvContent #outerDivCV .innerDivCValt h2 {
         font-family: "Josefin Sans", sans-serif;
         font-size: 1.5em;
-        color: #363636; }
+        color: #363636;
+        text-decoration: underline; }
       #cvContent #outerDivCV .innerDivCValt table {
         width: 50%;
         margin: -4% auto; }
         #cvContent #outerDivCV .innerDivCValt table ul {
           list-style-type: none;
           text-align: left; }
+      #cvContent #outerDivCV .innerDivCValt a {
+        margin: 4% auto;
+        display: block;
+        width: 10%; }
+        #cvContent #outerDivCV .innerDivCValt a img {
+          width: 40px;
+          height: auto; }
+        #cvContent #outerDivCV .innerDivCValt a:hover {
+          -webkit-filter: drop-shadow(0px 5px 4px black);
+          filter: drop-shadow(0px 5px 4px black); }
 
 #contactPhoto {
   float: left;
   width: 32%;
   height: 100%;
   background-color: red;
+  background-image: url("../photos/wireFrameSketch5.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative; }
   #contactPhoto h2 {
     position: absolute;
@@ -566,6 +597,8 @@ body {
       #contactContent div .socialMediaLinks:hover {
         -webkit-filter: brightness(100%);
         /* Chrome, Safari, Opera */
-        filter: brightness(100%); }
+        filter: brightness(100%);
+        -webkit-filter: drop-shadow(0px 6px 5px black);
+        filter: drop-shadow(0px 6px 5px black); }
 
 /*# sourceMappingURL=portfolio.css.map */
