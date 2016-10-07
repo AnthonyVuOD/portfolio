@@ -58,7 +58,7 @@ var app = angular
       {project: "Greenbelt Climbing Routes", link:"https://anthonyvuod.github.io/GreenbeltClimbingRoutes/", delay: ".1s", photo:"photos/greenbeltSS.png"},
       {project: "Travis Perkins Photography", link:"https://anthonyvuod.github.io/TravisPerkinsPhotography/", delay: ".2s", photo:"photos/travisPerkinsSS2.png"},
       {project: "How Much House?", link:"https://anthonyvuod.github.io/HowMuchHouse/", delay: ".3s", photo:"photos/houseSS2.png"},
-      {project: "Vu Properties", link:"https://anthonyvuod.github.io/VuProperties/", delay: ".4s", photo:"photos/vuPropertiesSS2.png"}
+      {project: "Vu Properties", link:"https://anthonyvuod.github.io/VuProperties/", delay: ".4s", photo:"photos/vuPropertiesSS.png"}
     ];
 
     $scope.fade=false;

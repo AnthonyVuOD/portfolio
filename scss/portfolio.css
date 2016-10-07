@@ -4,12 +4,6 @@ body {
   font-size: 16px;
   background-color: #363636;
   height: 100vh; }
-  body #copywrite {
-    position: absolute;
-    top: 89%;
-    right: 6%;
-    color: #e3e3e3;
-    font-family: "Josefin Sans", sans-serif; }
 
 #outerWrapper {
   position: absolute;
@@ -24,24 +18,26 @@ body {
 #header {
   width: 100%;
   height: 10%;
-  position: absolute; }
+  position: absolute;
+  clear: both; }
   #header h3 {
     position: absolute;
-    bottom: -25px;
+    bottom: -35px;
     right: 0;
-    font-size: 1.5em;
+    font-size: 2em;
     padding-right: 2%;
     color: #e3e3e3;
-    font-family: "Josefin Sans", sans-serif; }
+    font-family: "Raleway", sans-serif; }
     #header h3 span {
-      font-size: 1.5em;
-      padding-right: 15px;
-      font-family: "Raleway", sans-serif; }
+      font-size: .75em;
+      padding-left: 15px;
+      font-family: "Josefin Sans", sans-serif; }
 
 #menu {
   width: 100%;
   height: 10%;
-  position: absolute; }
+  position: absolute;
+  clear: both; }
   #menu ul {
     position: absolute;
     right: 0px;
@@ -90,6 +86,13 @@ body {
     opacity: 1; }
   #innerWrapper.ng-leave.ng-leave-active {
     opacity: 0; }
+
+#copyright {
+  position: absolute;
+  bottom: 7%;
+  right: 7%;
+  color: #e3e3e3;
+  font-family: "Josefin Sans", sans-serif; }
 
 #homePhoto {
   position: relative;
@@ -304,26 +307,29 @@ body {
   background-color: #e3e3e3;
   position: relative;
   margin: 0px 0px 0px 2px; }
-  #aboutContent h3 {
-    width: 80%;
-    margin: 8% auto 0% auto;
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 1.5em;
-    color: #363636;
-    position: relative; }
-  #aboutContent p {
-    width: 80%;
-    margin: 4% auto;
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 1.25em;
-    color: #363636; }
-    #aboutContent p span {
-      margin-left: 20px; }
-  #aboutContent img {
-    width: 33%;
-    height: auto;
-    float: right;
-    margin-right: 15%; }
+  #aboutContent #aboutDiv {
+    position: relative;
+    width: 100%; }
+    #aboutContent #aboutDiv h3 {
+      width: 80%;
+      margin: 8% auto 0% auto;
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 1.5em;
+      color: #363636;
+      position: relative; }
+    #aboutContent #aboutDiv p {
+      width: 80%;
+      margin: 4% auto;
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 1.25em;
+      color: #363636; }
+      #aboutContent #aboutDiv p span {
+        margin-left: 20px; }
+    #aboutContent #aboutDiv img {
+      width: 33%;
+      height: auto;
+      float: right;
+      margin-right: 15%; }
   #aboutContent.ng-enter {
     -webkit-transition: 0.65s linear all;
     -moz-transition: 0.65s linear all;
@@ -506,7 +512,6 @@ body {
   float: left;
   width: 32%;
   height: 100%;
-  background-color: red;
   background-image: url("../photos/wireFrameSketch5.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -601,65 +606,68 @@ body {
         -webkit-filter: drop-shadow(0px 6px 5px black);
         filter: drop-shadow(0px 6px 5px black); }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   body {
+    font-size: 16px;
     height: auto; }
-    body #copywrite {
-      top: auto;
-      right: 3%;
-      float: left; }
 
   #outerWrapper {
-    width: 100%;
+    width: 65%;
     height: auto;
     float: left; }
 
   #header {
-    height: 10%; }
+    height: 14%; }
     #header h3 {
-      bottom: -10px;
-      right: 0;
-      font-size: .75em;
-      padding-right: 2%; }
-      #header h3 span {
-        font-size: 1em;
-        padding-right: 15px; }
+      bottom: -15px;
+      font-size: 1.75em; }
 
   #menu {
-    height: 10%; }
+    height: 14%; }
     #menu ul {
       right: 0px;
-      bottom: -15px;
       width: 96%; }
       #menu ul li {
-        padding-right: 2%; }
+        padding-right: 2%;
+        margin-bottom: 3%; }
         #menu ul li a {
-          font-size: .75em; }
+          font-size: 1.5em; }
 
   #innerWrapper {
     width: 100%;
     height: auto;
-    top: 10%; }
+    top: 13%;
+    padding-bottom: 15%; }
+
+  #copyright {
+    display: none; }
 
   #homePhoto {
-    height: 60vh;
+    height: 50vh;
     width: 100%;
-    background-color: red;
     margin: 1px 1px 1px 1px; }
+    #homePhoto.ng-enter {
+      -webkit-transform: translate(0px);
+      -moz-transform: translate(0px);
+      -o-transform: translate(0px);
+      transform: translate(0px); }
+
+  #homeAbout.ng-enter, #homePortfolio.ng-enter, #homeCv.ng-enter, #homeContact.ng-enter {
+    -webkit-transform: translate(0px);
+    -moz-transform: translate(0px);
+    -o-transform: translate(0px);
+    transform: translate(0px); }
 
   .homeLinks {
     position: relative;
     width: 100%;
     height: 20vh;
-    margin: 1px 1px 1px 1px; }
-    .homeLinks:hover {
-      cursor: pointer; }
+    margin: 2% 1px 1px 1px; }
     .homeLinks h2 {
       position: absolute;
       font-size: 1.5em;
       bottom: -3%;
       right: 5%;
-      font-family: "Raleway", sans-serif;
       color: black; }
 
   #aboutPhoto {
@@ -674,33 +682,179 @@ body {
       font-size: 1.5em;
       bottom: -2%;
       right: 5%; }
+    #aboutPhoto.ng-enter {
+      -webkit-transform: translate(0px);
+      -moz-transform: translate(0px);
+      -o-transform: translate(0px);
+      transform: translate(0px); }
 
   #aboutContent {
     width: 100%;
     height: auto;
-    margin: 0px 0px 0px 0px; }
-    #aboutContent h3 {
+    margin: 2% 0px 0px 0px; }
+    #aboutContent #aboutDiv h3 {
       width: 90%;
-      font-size: 1em;
-      position: relative; }
-    #aboutContent p {
+      margin: 8% auto 0% auto;
+      font-size: 1.5em; }
+    #aboutContent #aboutDiv p {
       width: 90%;
       margin: 4% auto;
-      font-size: 1em; }
-      #aboutContent p span {
+      font-size: 1.25em; }
+      #aboutContent #aboutDiv p span {
         margin-left: 20px; }
-    #aboutContent img {
-      width: 50%;
-      margin-right: 5%;
-      padding-bottom: 8%; }
+    #aboutContent #aboutDiv img {
+      width: 45%;
+      height: auto;
+      float: right;
+      margin-right: 7%;
+      margin-bottom: 8%; }
+    #aboutContent.ng-enter {
+      -webkit-transform: translate(0px);
+      -moz-transform: translate(0px);
+      -o-transform: translate(0px);
+      transform: translate(0px); }
 
   .projects {
     width: 100%;
-    height: 40vh;
-    margin: 1px 1px 1px 1px; }
+    height: 30vh;
+    margin: 1px 1px 2% 1px; }
     .projects h2 {
-      bottom: -7%;
+      bottom: 0%;
       right: 1.5%;
-      font-size: 1.25em; } }
+      font-size: 1.25em; }
+
+  #cvPhoto {
+    width: 100%;
+    height: 50vh; }
+    #cvPhoto h2 {
+      bottom: -2%;
+      right: 5%;
+      font-size: 1.5em; }
+    #cvPhoto.ng-enter {
+      -webkit-transform: translateX(0px);
+      -moz-transform: translateX(0px);
+      -o-transform: translateX(0px);
+      transform: translateX(0px); }
+
+  #cvContent {
+    width: 100%;
+    height: auto;
+    margin: 2% 0px 0px 0px; }
+    #cvContent.ng-enter {
+      -webkit-transform: translateX(0px);
+      -moz-transform: translateX(0px);
+      -o-transform: translateX(0px);
+      transform: translateX(0px); }
+    #cvContent #outerDivCV {
+      width: 100%;
+      height: auto;
+      margin: auto;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.25em; }
+      #cvContent #outerDivCV .innerDivCV {
+        float: left;
+        width: 100%;
+        height: auto;
+        margin: 0 auto; }
+        #cvContent #outerDivCV .innerDivCV h2 {
+          font-size: 1.5em;
+          text-decoration: underline; }
+        #cvContent #outerDivCV .innerDivCV table {
+          width: 95%;
+          margin: 0 auto; }
+          #cvContent #outerDivCV .innerDivCV table .leftColumn {
+            text-align: left; }
+          #cvContent #outerDivCV .innerDivCV table .rightColumn {
+            text-align: right; }
+          #cvContent #outerDivCV .innerDivCV table span {
+            color: black;
+            font-weight: bolder; }
+      #cvContent #outerDivCV .innerDivCValt {
+        float: left;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        position: relative; }
+        #cvContent #outerDivCV .innerDivCValt h2 {
+          font-size: 1.5em;
+          text-decoration: underline; }
+        #cvContent #outerDivCV .innerDivCValt table {
+          width: 75%;
+          margin: -4% auto; }
+          #cvContent #outerDivCV .innerDivCValt table ul {
+            list-style-type: none;
+            text-align: left; }
+        #cvContent #outerDivCV .innerDivCValt a {
+          margin: 4% auto;
+          display: block;
+          width: 20%; }
+          #cvContent #outerDivCV .innerDivCValt a img {
+            width: 40px;
+            height: auto; }
+
+  #contactPhoto {
+    width: 100%;
+    height: 50vh; }
+    #contactPhoto h2 {
+      bottom: -2%;
+      right: 5%;
+      font-size: 1.5em; }
+    #contactPhoto.ng-enter {
+      -webkit-transform: translateX(0px);
+      -moz-transform: translateX(0px);
+      -o-transform: translateX(0px);
+      transform: translateX(0px); }
+
+  #contactContent {
+    width: 100%;
+    height: 20vh;
+    margin: 2% 0px 0px 0px; }
+    #contactContent.ng-enter {
+      -webkit-transform: translateX(0px);
+      -moz-transform: translateX(0px);
+      -o-transform: translateX(0px);
+      transform: translateX(0px); }
+    #contactContent div {
+      height: 60px;
+      width: 60%; }
+      #contactContent div .socialMediaLinks {
+        display: block;
+        height: 45px;
+        width: 25%;
+        position: relative;
+        float: left;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        -webkit-filter: brightness(75%);
+        /* Chrome, Safari, Opera */
+        filter: brightness(75%); } }
+@media screen and (max-width: 700px) {
+  body {
+    font-size: 18px;
+    height: auto; }
+
+  #header {
+    height: 12%; }
+    #header h3 span {
+      display: none; }
+
+  #outerWrapper {
+    width: 100%;
+    height: auto;
+    float: left; }
+
+  #innerWrapper {
+    top: 10%;
+    padding-bottom: 8%; }
+
+  #menu {
+    height: 11%; }
+    #menu ul li a {
+      font-size: 1em; }
+
+  #aboutContent #aboutDiv img {
+    width: 80%; } }
 
 /*# sourceMappingURL=portfolio.css.map */

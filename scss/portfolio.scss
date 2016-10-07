@@ -3,6 +3,10 @@ $primary-color: #363636; //dark gray
 $secondary-color: #e3e3e3; //white
 $primary-font: 'Raleway', sans-serif;
 $secondary-font: 'Josefin Sans', sans-serif;
+
+//
+$tablet-photo-height: 50vh;
+
 ////////////////////////////////////////////////////////////////////////////////
 
 
@@ -13,13 +17,6 @@ body {
   font-size: 16px;
   background-color: $primary-color;
   height: 100vh;
-  #copywrite{
-    position: absolute;
-    top: 89%;
-    right: 6%;
-    color: $secondary-color;
-    font-family: $secondary-font;
-  }
 }
 #outerWrapper {
   position: absolute;
@@ -35,18 +32,19 @@ body {
   width:100%;
   height: 10%;
   position: absolute;
+  clear: both;
   h3{
     position: absolute;
-    bottom: -25px;
+    bottom: -35px;
     right: 0;
-    font-size: 1.5em;
+    font-size: 2em;
     padding-right: 2%;
     color:$secondary-color;
-    font-family: $secondary-font;
+    font-family: $primary-font;
     span{
-      font-size: 1.5em;
-      padding-right: 15px;
-      font-family: $primary-font;
+      font-size: .75em;
+      padding-left: 15px;
+      font-family: $secondary-font;
     }
   }
 }
@@ -54,6 +52,7 @@ body {
   width:100%;
   height: 10%;
   position: absolute;
+  clear: both;
   ul{
     position: absolute;
     right: 0px;
@@ -117,6 +116,13 @@ body {
     opacity:0;
   }
 }
+#copyright{
+  position: absolute;
+  bottom: 7%;
+  right: 7%;
+  color: $secondary-color;
+  font-family: $secondary-font;
+}
 ///////////////////////////////////////HOME/////////////////////////////////////
 #homePhoto{
   position: relative;
@@ -160,18 +166,6 @@ body {
   }
 }
 #homeAbout{
-  // background-color: black;
-  // position: relative;
-  // float: left;
-  // width:34%;
-  // height: 50%;
-  // h2{
-  //   position: absolute;
-  //   font-size: 1.25em;
-  //   bottom: -3%;
-  //   right:5%;
-  //   font-family: 'Raleway', sans-serif;
-  // }
   background-image: url(../photos/rope3.png);
   background-position:bottom left;
   background-repeat: no-repeat;
@@ -212,18 +206,6 @@ body {
   }
 }
 #homePortfolio{
-  // background-color: white;
-  // position: relative;
-  // float: left;
-  // width:34%;
-  // height: 50%;
-  // h2{
-  //   position: absolute;
-  //   font-size: 1.25em;
-  //   bottom: -3%;
-  //   right:5%;
-  //   font-family: 'Raleway', sans-serif;
-  // }
   background-image: url(../photos/computer2.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -436,29 +418,33 @@ body {
   background-color:$secondary-color;
   position: relative;
   margin: 0px 0px 0px 2px;
-  h3{
-    width: 80%;
-    margin: 8% auto 0% auto;
-    font-family: $secondary-font;
-    font-size: 1.5em;
-    color: $primary-color;
+  #aboutDiv{
     position: relative;
-  }
-  p{
-    width: 80%;
-    margin: 4% auto;
-    font-family: $secondary-font;
-    font-size: 1.25em;
-    color: $primary-color;
-    span {
-      margin-left: 20px
+    width: 100%;
+    h3{
+      width: 80%;
+      margin: 8% auto 0% auto;
+      font-family: $secondary-font;
+      font-size: 1.5em;
+      color: $primary-color;
+      position: relative;
     }
-  }
-  img{
-    width: 33%;
-    height: auto;
-    float: right;
-    margin-right: 15%;
+    p{
+      width: 80%;
+      margin: 4% auto;
+      font-family: $secondary-font;
+      font-size: 1.25em;
+      color: $primary-color;
+      span {
+        margin-left: 20px
+      }
+    }
+    img{
+      width: 33%;
+      height: auto;
+      float: right;
+      margin-right: 15%;
+    }
   }
   &.ng-enter {
     -webkit-transition:0.65s linear all;
@@ -695,7 +681,7 @@ body {
   float: left;
   width: 32%;
   height: 100%;
-  background-color: red;
+  // background-color: red;
   background-image: url('../photos/wireFrameSketch5.png');
   background-position: center;
   background-repeat: no-repeat;
@@ -814,45 +800,36 @@ body {
     }
   }
 }
-// Smartphones (portrait and landscape)
-@media screen and (max-width: 700px){
-////////////////////// INDEX///////////////////////////
+/////////////////////////////Tablets in portrait view//////////////////////////////////
+@media screen and (max-width: 800px){
+////////////////////// INDEX/////////////////////////////////////////////////////////////////
   body {
+    font-size: 16px;
     height: auto;
-    #copywrite{
-      top:auto;
-      right: 3%;
-      float: left;
-    }
   }
   #outerWrapper {
-    width:100%;
+    width:65%;
     height: auto;
     float: left;
   }
   #header{
-    height: 10%;
+    height: 14%;
     h3{
-      bottom: -10px;
-      right: 0;
-      font-size: .75em;
-      padding-right: 2%;
-      span{
-        font-size: 1em;
-        padding-right: 15px;
-      }
+      bottom:-15px;
+      font-size: 1.75em;
     }
   }
   #menu{
-    height: 10%;
+    height: 14%;
     ul{
       right: 0px;
-      bottom: -15px;
+      // bottom: -30px;
       width: 96%;
       li{
         padding-right: 2%;
+        margin-bottom: 3%;
         a {
-          font-size: .75em;
+          font-size: 1.5em;
         }
       }
     }
@@ -860,29 +837,42 @@ body {
   #innerWrapper {
     width:100%;
     height: auto;
-    top:10%;
+    top:13%;
+    padding-bottom: 15%;
+  }
+  #copyright{
+    display:none;
   }
 //////////////////////HOME///////////////////////
   #homePhoto{
-    height:60vh;
+    height:$tablet-photo-height;
     width:100%;
-    background-color: red;
     margin: 1px 1px 1px 1px;
+    &.ng-enter {
+      -webkit-transform: translate(0px);
+      -moz-transform: translate(0px);
+      -o-transform: translate(0px);
+      transform: translate(0px);
+    }
+  }
+  #homeAbout, #homePortfolio, #homeCv, #homeContact{
+    &.ng-enter {
+      -webkit-transform: translate(0px);
+      -moz-transform: translate(0px);
+      -o-transform: translate(0px);
+      transform: translate(0px);
+    }
   }
   .homeLinks{
     position: relative;
     width:100%;
     height: 20vh;
-    margin: 1px 1px 1px 1px;
-    &:hover{
-      cursor: pointer;
-    }
+    margin: 2% 1px 1px 1px;
     h2{
       position: absolute;
       font-size: 1.5em;
       bottom: -3%;
       right:5%;
-      font-family: $primary-font;
       color: black;
     }
   }
@@ -890,7 +880,7 @@ body {
   #aboutPhoto {
     float: left;
     width:100%;
-    height: 50vh;
+    height: $tablet-photo-height;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -900,46 +890,233 @@ body {
       bottom: -2%;
       right: 5%;
     }
+    &.ng-enter {
+      -webkit-transform: translate(0px);
+      -moz-transform: translate(0px);
+      -o-transform: translate(0px);
+      transform: translate(0px);
+    }
   }
   #aboutContent{
     width: 100%;
     height: auto;
-    margin: 0px 0px 0px 0px;
-    h3{
-      width: 90%;
-      font-size: 1em;
-      position: relative;
-    }
-    p{
-      width: 90%;
-      margin: 4% auto;
-      font-size: 1em;
-      span {
-        margin-left: 20px
+    margin: 2% 0px 0px 0px;
+    #aboutDiv{
+      h3{
+        width: 90%;
+        margin: 8% auto 0% auto;
+        font-size: 1.5em;
+      }
+      p{
+        width: 90%;
+        margin: 4% auto;
+        font-size: 1.25em;
+        span {
+          margin-left: 20px
+        }
+      }
+      img{
+        width: 45%;
+        height: auto;
+        float: right;
+        margin-right: 7%;
+        margin-bottom: 8%;
       }
     }
-    img{
-      width: 50%;
-      margin-right: 5%;
-      padding-bottom: 8%;
+    &.ng-enter {
+      -webkit-transform: translate(0px);
+      -moz-transform: translate(0px);
+      -o-transform: translate(0px);
+      transform: translate(0px);
     }
   }
 //////////////////////////PORTFOLIO/////////////////////////////////////
   .projects {
     width: 100%;
-    height: 40vh;
-    margin: 1px 1px 1px 1px;
+    height: 30vh;
+    margin: 1px 1px 2% 1px;
     h2 {
-      bottom: -7%;
+      bottom: 0%;
       right:1.5%;
       font-size: 1.25em;
     }
   }
+  //////////////////////////////////CV//////////////////////////////////////////
+  #cvPhoto {
+    width:100%;
+    height: $tablet-photo-height;
+    h2 {
+      bottom: -2%;
+      right: 5%;
+      font-size: 1.5em;
+    }
+    &.ng-enter {
+      -webkit-transform: translateX(0px);
+      -moz-transform: translateX(0px);
+      -o-transform: translateX(0px);
+      transform: translateX(0px);
+    }
+  }
+  #cvContent{
+    width: 100%;
+    height: auto;
+    margin: 2% 0px 0px 0px;
+    &.ng-enter {
+      -webkit-transform: translateX(0px);
+      -moz-transform: translateX(0px);
+      -o-transform: translateX(0px);
+      transform: translateX(0px);
+    }
+    #outerDivCV {
+      width: 100%;
+      height: auto;
+      margin: auto;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.25em;
+      .innerDivCV {
+        float: left;
+        width: 100%;
+        height: auto;
+        margin:0 auto;
+        h2{;
+          font-size: 1.5em;
+          text-decoration: underline;
+        }
+        table{
+          // border: 1px solid black;
+          width:95%;
+          margin: 0 auto;
+          .leftColumn {
+            text-align: left;
+          }
+          .rightColumn {
+            text-align: right;
+          }
+          span{
+            color: black;
+            font-weight: bolder;
+          }
+        }
+      }
+      .innerDivCValt {
+        float: left;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        position: relative;
+        h2{
+          font-size: 1.5em;
+          text-decoration: underline;
+        }
+        table{
+          // border: 1px solid black;
+          width: 75%;
+          margin: -4% auto;
+          ul {
+            list-style-type: none;
+            text-align: left;
+          }
+        }
+        a {
+          margin: 4% auto;
+          display: block;
+          width: 20%;
+          img{
+            width: 40px;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+//////////////////////CONTACT//////////////////////////////////////////////
+  #contactPhoto {
+    width: 100%;
+    height: $tablet-photo-height;
+    h2 {
+      bottom: -2%;
+      right: 5%;
+      font-size: 1.5em;
+    }
+    &.ng-enter {
+      -webkit-transform: translateX(0px);
+      -moz-transform: translateX(0px);
+      -o-transform: translateX(0px);
+      transform: translateX(0px);
+    }
+  }
+  #contactContent {
+    width: 100%;
+    height: 20vh;
+    margin: 2% 0px 0px 0px;
+    &.ng-enter {
+      -webkit-transform: translateX(0px);
+      -moz-transform: translateX(0px);
+      -o-transform: translateX(0px);
+      transform: translateX(0px);
+    }
+    div {
+      height: 60px;
+      width:60%;
+      .socialMediaLinks {
+        display: block;
+        height: 45px;
+        width: 25%;
+        position: relative;
+        float: left;
+        // margin: 0% 2.5% 0% 2.5%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        -webkit-filter: brightness(75%); /* Chrome, Safari, Opera */
+        filter: brightness(75%);
+        // -webkit-transition: 1s linear; /* Safari */
+        // transition: 1s linear;
+      }
+    }
+  }
+
 }
-// tablets
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px) {
-
-
+/////////////////////////////Phones in portrait view/////////////////////////////////
+@media screen and (max-width: 700px){
+////////////////////// INDEX/////////////////////////////////////////////////////////////////
+  body {
+    font-size: 18px;
+    height: auto;
+  }
+  #header{
+    height:12%;
+    h3{
+      span{
+        display: none;
+      }
+    }
+  }
+  #outerWrapper {
+    width:100%;
+    height: auto;
+    float: left;
+  }
+  #innerWrapper {
+    top:10%;
+    padding-bottom: 8%;
+  }
+  #menu{
+    height: 11%;
+    ul{
+      li{
+        a {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+  #aboutContent{
+    #aboutDiv{
+      img{
+        width: 80%;
+      }
+    }
+  }
 }
