@@ -5,7 +5,7 @@ $primary-font: 'Raleway', sans-serif;
 $secondary-font: 'Josefin Sans', sans-serif;
 
 //
-$tablet-photo-height: 50vh;
+$tablet-photo-height: 60vh;
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -21,7 +21,11 @@ body {
 #outerWrapper {
   position: absolute;
   width:90%;
+  max-width: 1150px;
+  min-width: 1150px;
   height: 80vh;
+  max-height: 530px;
+  min-height: 500px;
   margin: auto;
   top:0;
   left:0;
@@ -60,19 +64,33 @@ body {
     width: 96%;
     li{
       float: right;
-      padding-right: 2%;
+      padding-right: 3%;
       list-style-type: none;
+      position: relative;
       a {
+        // position: relative;
+        margin-top:50px;
         text-decoration: none;
         color:$secondary-color;
         font-size: 1.25em;
         font-family: $primary-font;
+        // padding-bottom: -10%;
         &:hover {
           text-decoration: underline;
         }
       }
     }
+    span {
+      float: left;
+      margin-left: -2%;
+      margin-top: -25px;
+    }
   }
+}
+#avLogo{
+  width: 50px;
+  height: auto;
+  margin-bottom: -31px;
 }
 .fadeHeaders{
   &.ng-enter {
@@ -811,6 +829,9 @@ body {
     width:65%;
     height: auto;
     float: left;
+    max-width: none;
+    min-width: inherit;
+    max-height: none;
   }
   #header{
     height: 14%;
@@ -934,7 +955,7 @@ body {
   .projects {
     width: 100%;
     height: 30vh;
-    margin: 1px 1px 2% 1px;
+    margin: 1px 1px 1% 1px;
     h2 {
       bottom: 0%;
       right:1.5%;
@@ -1078,8 +1099,53 @@ body {
   }
 
 }
-/////////////////////////////Phones in portrait view/////////////////////////////////
+/////////////////////////////Phones in landscape view/////////////////////////////////
 @media screen and (max-width: 700px){
+////////////////////// INDEX/////////////////////////////////////////////////////////////////
+  body {
+    font-size: 18px;
+    height: auto;
+  }
+  #header{
+    height:23%;
+    //12%
+    h3{
+      span{
+        display: none;
+      }
+    }
+  }
+  #outerWrapper {
+    width:100%;
+    height: auto;
+    float: left;
+  }
+  #innerWrapper {
+    top:20%;
+    //10%
+    padding-bottom: 8%;
+  }
+  #menu{
+    height: 23%;
+    //11%
+    ul{
+      li{
+        a {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+  #aboutContent{
+    #aboutDiv{
+      img{
+        width: 80%;
+      }
+    }
+  }
+}
+/////////////////////////////Phones in portrait view/////////////////////////////////
+@media screen and (max-width: 650px){
 ////////////////////// INDEX/////////////////////////////////////////////////////////////////
   body {
     font-size: 18px;
