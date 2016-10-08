@@ -232,10 +232,7 @@ body {
     opacity: 0; }
 
 #homeContact {
-  background-image: url(../photos/pen.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
+  background-color: blue; }
   #homeContact.ng-enter {
     -webkit-transition: 0.65s linear all;
     -moz-transition: 0.65s linear all;
@@ -624,7 +621,7 @@ body {
         -webkit-filter: drop-shadow(0px 6px 5px black);
         filter: drop-shadow(0px 6px 5px black); }
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 800px) {
   body {
     font-size: 16px;
     height: auto; }
@@ -638,13 +635,13 @@ body {
     max-height: none; }
 
   #header {
-    height: 115px; }
+    height: 14%; }
     #header h3 {
       bottom: -15px;
       font-size: 1.75em; }
 
   #menu {
-    height: 115px; }
+    height: 14%; }
     #menu ul {
       right: 0px;
       width: 96%; }
@@ -653,13 +650,11 @@ body {
         margin-bottom: 3%; }
         #menu ul li a {
           font-size: 1.5em; }
-      #menu ul span {
-        margin-top: -22px; }
 
   #innerWrapper {
     width: 100%;
     height: auto;
-    top: 100px;
+    top: 13%;
     padding-bottom: 15%; }
 
   #copyright {
@@ -667,7 +662,6 @@ body {
 
   #homePhoto {
     height: 60vh;
-    min-height: 250px;
     width: 100%;
     margin: 1px 1px 1px 1px; }
     #homePhoto.ng-enter {
@@ -686,7 +680,6 @@ body {
     position: relative;
     width: 100%;
     height: 20vh;
-    min-height: 125px;
     margin: 2% 1px 1px 1px; }
     .homeLinks h2 {
       position: absolute;
@@ -699,7 +692,6 @@ body {
     float: left;
     width: 100%;
     height: 60vh;
-    min-height: 250px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -743,7 +735,6 @@ body {
   .projects {
     width: 100%;
     height: 30vh;
-    min-height: 200px;
     margin: 1px 1px 1% 1px; }
     .projects h2 {
       bottom: 0%;
@@ -752,8 +743,7 @@ body {
 
   #cvPhoto {
     width: 100%;
-    height: 60vh;
-    min-height: 250px; }
+    height: 60vh; }
     #cvPhoto h2 {
       bottom: -2%;
       right: 5%;
@@ -823,8 +813,7 @@ body {
 
   #contactPhoto {
     width: 100%;
-    height: 60vh;
-    min-height: 250px; }
+    height: 60vh; }
     #contactPhoto h2 {
       bottom: -2%;
       right: 5%;
@@ -838,7 +827,6 @@ body {
   #contactContent {
     width: 100%;
     height: 20vh;
-    min-height: 200px;
     margin: 2% 0px 0px 0px; }
     #contactContent.ng-enter {
       -webkit-transform: translateX(0px);
@@ -871,33 +859,28 @@ body {
       display: none; }
 
   #outerWrapper {
-    width: 80%;
+    width: 100%;
     height: auto;
     float: left; }
 
   #innerWrapper {
-    top: 60px;
+    top: 20%;
     padding-bottom: 8%; }
 
-  #header {
-    height: 70px; }
-
   #menu {
-    height: 75px; }
+    height: 23%; }
     #menu ul li a {
       font-size: 1em; }
-    #menu ul span {
-      margin-top: -30px; }
 
   #aboutContent #aboutDiv img {
-    width: 50%; } }
-@media screen and (max-width: 500px) {
+    width: 80%; } }
+@media screen and (max-width: 650px) {
   body {
     font-size: 18px;
     height: auto; }
 
   #header {
-    height: 74px; }
+    height: 12%; }
     #header h3 span {
       display: none; }
 
@@ -907,17 +890,15 @@ body {
     float: left; }
 
   #innerWrapper {
-    top: 54px;
+    top: 10%;
     padding-bottom: 8%; }
 
   #menu {
-    height: 70px; }
+    height: 11%; }
     #menu ul li a {
       font-size: 1em; }
-    #menu ul span {
-      margin-top: -30px; }
 
   #aboutContent #aboutDiv img {
-    width: 75%; } }
+    width: 80%; } }
 
-/*# sourceMappingURL=portfolio.css.map */
+/*# sourceMappingURL=portfolio.cs.map */
