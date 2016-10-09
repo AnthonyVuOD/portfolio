@@ -3,15 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Anthony Vu</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="scss/portfolio.css" charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="scss/portfolio.css" charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.js"></script>
-    <script src="js/portfolio.js"></script>
+    <script type="text/javascript" src="js/portfolio.js"></script>
 
   </head>
   <body ng-app="portfolioModule" ng-controller="indexCTRL">
@@ -33,7 +35,7 @@
       </div>
       <!--templates will load into "innerWrapper" -->
       <div id="innerWrapper" ng-view></div>
+      <div id="copyright">&copy; 2016, Anthony Vu</div>
     </div>
-    <div id="copyright">&copy; 2016, Anthony Vu</div>
   </body>
 </html>
