@@ -34,8 +34,10 @@
         </ul>
       </div>
       <!--templates will load into "innerWrapper" -->
-      <div id="innerWrapper" ng-view></div>
-      <div id="copyright">&copy; 2016, Anthony Vu</div>
+      <div id="innerWrapper">
+        <div id="templateLoad" ng-view></div>
+        <p id="copyright">&copy; 2016, Anthony Vu</p>
+      </div>
     </div>
   </body>
 </html>

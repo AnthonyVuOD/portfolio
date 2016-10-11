@@ -3,7 +3,8 @@ body {
   padding: 0;
   font-size: 16px;
   background-color: #363636;
-  height: 100vh; }
+  height: 100vh;
+  position: relative; }
 
 #outerWrapper {
   position: absolute;
@@ -11,7 +12,7 @@ body {
   width: 1150px;
   height: 525px;
   margin: 0 auto;
-  top: 14%;
+  top: 13%;
   left: 0;
   right: 0;
   bottom: 0; }
@@ -98,10 +99,14 @@ body {
     opacity: 1; }
   #innerWrapper.ng-leave.ng-leave-active {
     opacity: 0; }
+  #innerWrapper #templateLoad {
+    position: relative;
+    width: 100%;
+    height: 100%; }
 
 #copyright {
   position: absolute;
-  bottom: -20px;
+  bottom: -37px;
   right: 2.5%;
   color: #e3e3e3;
   font-family: "Josefin Sans", sans-serif; }
@@ -269,10 +274,10 @@ body {
   .homeLinks h2 {
     position: absolute;
     font-size: 1.5em;
-    bottom: -3%;
+    bottom: -4%;
     right: 5%;
     font-family: "Raleway", sans-serif;
-    color: black; }
+    color: #363636; }
 
 #aboutPhoto {
   float: left;
@@ -394,7 +399,7 @@ body {
     font-family: "Raleway", sans-serif;
     color: #e3e3e3;
     font-size: 1.5em;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; }
+    text-shadow: -1px 0 #363636, 0 1px #363636, 1px 0 #363636, 0 -1px #363636; }
 
 #cvPhoto {
   float: left;
@@ -665,30 +670,25 @@ body {
     min-height: 250px;
     width: 100%;
     margin: 0px 0px 0px 0px; }
-    #homePhoto.ng-enter {
-      -webkit-transform: translate(0px);
-      -moz-transform: translate(0px);
-      -o-transform: translate(0px);
-      transform: translate(0px); }
 
-  #homeAbout.ng-enter, #homePortfolio.ng-enter, #homeCv.ng-enter, #homeContact.ng-enter {
+  #homePhoto.ng-enter, #homeAbout.ng-enter, #homePortfolio.ng-enter, #homeCv.ng-enter, #homeContact.ng-enter {
     -webkit-transform: translate(0px);
     -moz-transform: translate(0px);
     -o-transform: translate(0px);
     transform: translate(0px); }
 
+  #homeCv {
+    background-position: bottom; }
+
   .homeLinks {
-    position: relative;
     width: 100%;
     height: 20vh;
     min-height: 125px;
     margin: 2% 0px 0px 0px; }
     .homeLinks h2 {
-      position: absolute;
       font-size: 1.5em;
       bottom: -3%;
-      right: 5%;
-      color: black; }
+      right: 5%; }
 
   #aboutPhoto {
     float: left;
@@ -741,7 +741,7 @@ body {
     min-height: 200px;
     margin: 0px 0px 1% 0px; }
     .projects h2 {
-      bottom: 0%;
+      bottom: -6%;
       right: 1.5%;
       font-size: 1.25em; }
 
@@ -882,7 +882,10 @@ body {
       margin-top: -30px; }
 
   #aboutContent #aboutDiv img {
-    width: 50%; } }
+    width: 50%; }
+
+  .homeLinks h2 {
+    bottom: -8%; } }
 @media screen and (max-width: 500px) {
   body {
     font-size: 18px;
@@ -903,13 +906,16 @@ body {
     padding-bottom: 8%; }
 
   #menu {
-    height: 70px; }
+    height: 68px; }
     #menu ul li a {
       font-size: 1em; }
     #menu ul span {
       margin-top: -30px; }
 
   #aboutContent #aboutDiv img {
-    width: 75%; } }
+    width: 75%; }
+
+  #cvContent #outerDivCV .innerDivCValt table {
+    width: 100%; } }
 
 /*# sourceMappingURL=portfolio.css.map */
