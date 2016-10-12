@@ -3,18 +3,59 @@ $primary-color: #363636; //dark gray
 $secondary-color: #e3e3e3; //white
 $primary-font: 'Raleway', sans-serif;
 $secondary-font: 'Josefin Sans', sans-serif;
-
-//
 $tablet-photo-height: 60vh;
+//////////////////////////////////////////////Mixins//////////////////////////
+@mixin animationSlideIn($fadeInTime, $slideIn) {
+  &.ng-enter {
+    -webkit-transition: ($fadeInTime) linear all;
+    -moz-transition: ($fadeInTime) linear all;
+    -o-transition: ($fadeInTime) linear all;
+    transition: ($fadeInTime) linear all;
 
+    -webkit-transform: ($slideIn);
+    -moz-transform: ($slideIn);
+    -o-transform: ($slideIn);
+    transform: ($slideIn);
+
+    opacity:0;
+  }
+
+  &.ng-enter.ng-enter-active {
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -o-transform: translate(0);
+    transform: translate(0);
+
+    opacity:1;
+  }
+  &.ng-leave {
+    -webkit-transition:0.5s linear all;
+    -moz-transition:0.5s linear all;
+    -o-transition:0.5s linear all;
+    transition:0.5s linear all;
+
+    opacity:1;
+  }
+  &.ng-leave.ng-leave-active {
+    opacity:0;
+  }
+}
+@mixin backgroundImagePosition($position) {
+  background-position:$position;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@mixin templatePhotos() {
+  float: left;
+  width:32%;
+  height: 100%;
+  position: relative;
+}
 ////////////////////////////////////////////////////////////////////////////////
 
 
 /////////////////////INDEX////////////////////
-// html{
-//   width: auto;
-//   height: auto;
-// }
+
 body {
   margin:0;
   padding:0;
@@ -122,17 +163,7 @@ body {
   height: 90%;
   position: absolute;
   top:10%;
-  &.ng-leave {
-    -webkit-transition:0.5s linear all;
-    -moz-transition:0.5s linear all;
-    -o-transition:0.5s linear all;
-    transition:0.5s linear all;
-
-    opacity:1;
-  }
-  &.ng-leave.ng-leave-active {
-    opacity:0;
-  }
+  @include animationSlideIn(0.5s,(translateX(0px)));
   #templateLoad{
     position: relative;
     width:100%;
@@ -152,197 +183,29 @@ body {
   float: left;
   height:99.8%;
   width:33%;
-  background-color: red;
   margin: 1px 1px 1px 1px;
-  &.ng-enter {
-    -webkit-transition: 0.65s linear all;
-    -moz-transition: 0.65s linear all;
-    -o-transition: 0.65s linear all;
-    transition: 0.65s linear all;
-
-    -webkit-transform: translateX(-35px);
-    -moz-transform: translateX(-35px);
-    -o-transform: translateX(-35px);
-    transform: translateX(-35px);
-
-    opacity:0;
-  }
-
-  &.ng-enter.ng-enter-active {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
-
-    opacity:1;
-  }
-  &.ng-leave {
-    -webkit-transition:0.5s linear all;
-    -moz-transition:0.5s linear all;
-    -o-transition:0.5s linear all;
-    transition:0.5s linear all;
-
-    opacity:1;
-  }
-  &.ng-leave.ng-leave-active {
-    opacity:0;
-  }
+  background-color: red;
+  @include animationSlideIn(0.65s,(translateX(-30px)));
 }
 #homeAbout{
   background-image: url(../photos/rope3.png);
-  background-position:bottom left;
-  background-repeat: no-repeat;
-  background-size: cover;
-  &.ng-enter {
-    -webkit-transition:0.65s linear all;
-    -moz-transition:0.65s linear all;
-    -o-transition:0.65s linear all;
-    transition:0.65s linear all;
-
-    -webkit-transform: translateY(-30px);
-    -moz-transform: translateY(-30px);
-    -o-transform: translateY(-30px);
-    transform: translateY(-30px);
-
-    opacity:0;
-  }
-
-  &.ng-enter.ng-enter-active {
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0);
-
-    opacity:1;
-
-  }
-  &.ng-leave {
-    -webkit-transition:0.5s linear all;
-    -moz-transition:0.5s linear all;
-    -o-transition:0.5s linear all;
-    transition:0.5s linear all;
-
-    opacity:1;
-  }
-  &.ng-leave.ng-leave-active {
-    opacity:0;
-  }
+  @include backgroundImagePosition(bottom left);
+  @include animationSlideIn(0.65s,(translateY(-30px)));
 }
 #homePortfolio{
   background-image: url(../photos/computer2.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  &.ng-enter {
-    -webkit-transition:0.65s linear all;
-    -moz-transition:0.65s linear all;
-    -o-transition:0.65s linear all;
-    transition:0.65s linear all;
-
-    -webkit-transform: translate(30px, -30px);
-    -moz-transform: translate(30px, -30px);
-    -o-transform: translate(30px, -30px);
-    transform: translate(30px, -30px);
-
-    opacity:0;
-  }
-  &.ng-enter.ng-enter-active {
-    -webkit-transform: translate(0);
-    -moz-transform: translate(0);
-    -o-transform: translate(0);
-    transform: translate(0);
-
-    opacity:1;
-  }
-  &.ng-leave {
-    -webkit-transition:0.5s linear all;
-    -moz-transition:0.5s linear all;
-    -o-transition:0.5s linear all;
-    transition:0.5s linear all;
-
-    opacity:1;
-  }
-  &.ng-leave.ng-leave-active {
-    opacity:0;
-  }
+  @include backgroundImagePosition(center);
+  @include animationSlideIn(0.65s,(translate(30px,-30px)));
 }
 #homeCv{
   background-image: url(../photos/guitar.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  &.ng-enter {
-    -webkit-transition:0.65s linear all;
-    -moz-transition:0.65s linear all;
-    -o-transition:0.65s linear all;
-    transition:0.65s linear all;
-
-    -webkit-transform: translateY(30px);
-    -moz-transform: translateY(30px);
-    -o-transform: translateY(30px);
-    transform: translateY(30px);
-
-    opacity:0;
-  }
-
-  &.ng-enter.ng-enter-active {
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0);
-
-    opacity:1;
-
-  }
-  &.ng-leave {
-    -webkit-transition:0.5s linear all;
-    -moz-transition:0.5s linear all;
-    -o-transition:0.5s linear all;
-    transition:0.5s linear all;
-
-    opacity:1;
-  }
-  &.ng-leave.ng-leave-active {
-    opacity:0;
-  }
+  @include backgroundImagePosition(center);
+  @include animationSlideIn(0.65s,(translateY(30px)));
 }
 #homeContact{
   background-image: url(../photos/pen.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  &.ng-enter {
-    -webkit-transition:0.65s linear all;
-    -moz-transition:0.65s linear all;
-    -o-transition:0.65s linear all;
-    transition:0.65s linear all;
-
-    -webkit-transform: translate(25px, 25px);
-    -moz-transform: translate(25px, 25px);
-    -o-transform: translate(25px, 25px);
-    transform: translate(25px, 25px);
-
-    opacity:0;
-  }
-  &.ng-enter.ng-enter-active {
-    -webkit-transform: translate(0);
-    -moz-transform: translate(0);
-    -o-transform: translate(0);
-    transform: translate(0);
-
-    opacity:1;
-  }
-  &.ng-leave {
-    -webkit-transition:0.5s linear all;
-    -moz-transition:0.5s linear all;
-    -o-transition:0.5s linear all;
-    transition:0.5s linear all;
-
-    opacity:1;
-  }
-  &.ng-leave.ng-leave-active {
-    opacity:0;
-  }
+  @include backgroundImagePosition(center);
+  @include animationSlideIn(0.65s,(translate(25px,25px)));
 }
 .homeLinks{
   position: relative;
@@ -364,14 +227,15 @@ body {
 }
 //////////////////////////////////////ABOUT/////////////////////////////////////
 #aboutPhoto {
-  float: left;
-  width:32%;
-  height: 100%;
+
+  // float: left;
+  // width:32%;
+  // height: 100%;
+  // position: relative;
   background-image: url('../photos/aboutPhoto2.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+  @include templatePhotos();
+  @include backgroundImagePosition(center);
+  @include animationSlideIn(0.65s,(translateX(-35px)));
   h2 {
     position: absolute;
     font-size: 1.5em;
@@ -380,39 +244,7 @@ body {
     font-family: $primary-font;
     color: $secondary-color;
   }
-  &.ng-enter {
-    -webkit-transition:0.65s linear all;
-    -moz-transition:0.65s linear all;
-    -o-transition:0.65s linear all;
-    transition:0.65s linear all;
 
-    -webkit-transform: translateX(-35px);
-    -moz-transform: translateX(-35px);
-    -o-transform: translateX(-35px);
-    transform: translateX(-35px);
-
-    opacity:0;
-  }
-
-  &.ng-enter.ng-enter-active {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
-
-    opacity:1;
-  }
-  &.ng-leave {
-    -webkit-transition:0.5s linear all;
-    -moz-transition:0.5s linear all;
-    -o-transition:0.5s linear all;
-    transition:0.5s linear all;
-
-    opacity:1;
-  }
-  &.ng-leave.ng-leave-active {
-    opacity:0;
-  }
 }
 #aboutContent{
   float: left;
@@ -421,6 +253,7 @@ body {
   background-color:$secondary-color;
   position: relative;
   margin: 0px 0px 0px 2px;
+  @include animationSlideIn(0.65s,(translateX(35px)));
   #aboutDiv{
     position: relative;
     width: 100%;
@@ -449,39 +282,6 @@ body {
       margin-right: 15%;
     }
   }
-  &.ng-enter {
-    -webkit-transition:0.65s linear all;
-    -moz-transition:0.65s linear all;
-    -o-transition:0.65s linear all;
-    transition:0.65s linear all;
-
-    -webkit-transform: translateX(35px);
-    -moz-transform: translateX(35px);
-    -o-transform: translateX(35px);
-    transform: translateX(35px);
-
-    opacity:0;
-  }
-
-  &.ng-enter.ng-enter-active {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
-
-    opacity:1;
-  }
-  &.ng-leave {
-    -webkit-transition:0.5s linear all;
-    -moz-transition:0.5s linear all;
-    -o-transition:0.5s linear all;
-    transition:0.5s linear all;
-
-    opacity:1;
-  }
-  &.ng-leave.ng-leave-active {
-    opacity:0;
-  }
 }
 ///////////////////////////////////////PORTFOLIO/////////////////////////////////////
 .projects {
@@ -489,21 +289,9 @@ body {
   width: 49.5%;
   height: 49.5%;
   position: relative;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size:cover;
   margin: 1px 1px 1px 1px;
-  &.ng-enter {
-    -webkit-transition:.55s linear all;
-    -moz-transition:.55s linear all;
-    -o-transition:.55s linear all;
-    transition:.55s linear all;
-
-    opacity:0;
-  }
-  &.ng-enter.ng-enter-active {
-    opacity:1;
-  }
+  @include backgroundImagePosition(top);
+  @include animationSlideIn(0.5s,(translate(0px)));
   h2 {
     position: absolute;
     bottom: -7%;
@@ -517,11 +305,9 @@ body {
 
 ///////////////////////////////////////CV/////////////////////////////////////
 #cvPhoto {
-  float: left;
-  width:32%;
-  height: 100%;
   background-color: purple;
-  position: relative;
+  @include templatePhotos();
+  @include animationSlideIn(0.55s,(translateX(-35px)));
   h2 {
     position: absolute;
     bottom: -2%;
@@ -529,39 +315,6 @@ body {
     font-family: $primary-font;
     color: $primary-color;
     font-size: 1.5em;
-  }
-  &.ng-enter {
-    -webkit-transition:0.65s linear all;
-    -moz-transition:0.65s linear all;
-    -o-transition:0.65s linear all;
-    transition:0.65s linear all;
-
-    -webkit-transform: translateX(-35px);
-    -moz-transform: translateX(-35px);
-    -o-transform: translateX(-35px);
-    transform: translateX(-35px);
-
-    opacity:0;
-  }
-
-  &.ng-enter.ng-enter-active {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
-
-    opacity:1;
-  }
-  &.ng-leave {
-    -webkit-transition:0.5s linear all;
-    -moz-transition:0.5s linear all;
-    -o-transition:0.5s linear all;
-    transition:0.5s linear all;
-
-    opacity:1;
-  }
-  &.ng-leave.ng-leave-active {
-    opacity:0;
   }
 }
 #cvContent{
@@ -571,39 +324,7 @@ body {
   background-color:$secondary-color;
   margin: 0px 0px 0px 2px;
   position: relative;
-  &.ng-enter {
-    -webkit-transition:0.65s linear all;
-    -moz-transition:0.65s linear all;
-    -o-transition:0.65s linear all;
-    transition:0.65s linear all;
-
-    -webkit-transform: translateX(35px);
-    -moz-transform: translateX(35px);
-    -o-transform: translateX(35px);
-    transform: translateX(35px);
-
-    opacity:0;
-  }
-
-  &.ng-enter.ng-enter-active {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
-
-    opacity:1;
-  }
-  &.ng-leave {
-    -webkit-transition:0.5s linear all;
-    -moz-transition:0.5s linear all;
-    -o-transition:0.5s linear all;
-    transition:0.5s linear all;
-
-    opacity:1;
-  }
-  &.ng-leave.ng-leave-active {
-    opacity:0;
-  }
+  @include animationSlideIn(0.65s,(translateX(35px)));
   #outerDivCV {
     width: 95%;
     height: 90%;
@@ -681,15 +402,10 @@ body {
 
 /////////////////////////////////////// CONTACT/////////////////////////////////////
 #contactPhoto {
-  float: left;
-  width: 32%;
-  height: 100%;
-  // background-color: red;
   background-image: url('../photos/wireFrameSketch5.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+  @include templatePhotos();
+  @include backgroundImagePosition(center);
+  @include animationSlideIn(0.65s,(translateX(-35px)));
   h2 {
     position: absolute;
     bottom: -2%;
@@ -697,39 +413,6 @@ body {
     font-family: $primary-font;
     color: $primary-color;
     font-size: 1.5em;
-  }
-  &.ng-enter {
-    -webkit-transition:0.65s linear all;
-    -moz-transition:0.65s linear all;
-    -o-transition:0.65s linear all;
-    transition:0.65s linear all;
-
-    -webkit-transform: translateX(-35px);
-    -moz-transform: translateX(-35px);
-    -o-transform: translateX(-35px);
-    transform: translateX(-35px);
-
-    opacity:0;
-  }
-
-  &.ng-enter.ng-enter-active {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
-
-    opacity:1;
-  }
-  &.ng-leave {
-    -webkit-transition:0.5s linear all;
-    -moz-transition:0.5s linear all;
-    -o-transition:0.5s linear all;
-    transition:0.5s linear all;
-
-    opacity:1;
-  }
-  &.ng-leave.ng-leave-active {
-    opacity:0;
   }
 }
 #contactContent {
@@ -739,39 +422,7 @@ body {
   position: relative;
   background-color:$secondary-color;
   margin: 0px 0px 0px 2px;
-  &.ng-enter {
-    -webkit-transition:0.65s linear all;
-    -moz-transition:0.65s linear all;
-    -o-transition:0.65s linear all;
-    transition:0.65s linear all;
-
-    -webkit-transform: translateX(35px);
-    -moz-transform: translateX(35px);
-    -o-transform: translateX(35px);
-    transform: translateX(35px);
-
-    opacity:0;
-  }
-
-  &.ng-enter.ng-enter-active {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
-
-    opacity:1;
-  }
-  &.ng-leave {
-    -webkit-transition:0.5s linear all;
-    -moz-transition:0.5s linear all;
-    -o-transition:0.5s linear all;
-    transition:0.5s linear all;
-
-    opacity:1;
-  }
-  &.ng-leave.ng-leave-active {
-    opacity:0;
-  }
+  @include animationSlideIn(0.65s,(translateX(35px)));
   div {
     // background-color: yellow;
     position: relative;
@@ -814,8 +465,6 @@ body {
     width:65%;
     height: auto;
     max-width: none;
-    // min-width: inherit;
-    // max-height: none;
     top:0;
   }
   #header{
@@ -829,7 +478,6 @@ body {
     height: 115px;
     ul{
       right: 0px;
-      // bottom: -30px;
       width: 96%;
       li{
         padding-right: 2%;
@@ -860,15 +508,10 @@ body {
     margin: 0px 0px 0px 0px;
   }
   #homePhoto, #homeAbout, #homePortfolio, #homeCv, #homeContact{
-    &.ng-enter {
-      -webkit-transform: translate(0px);
-      -moz-transform: translate(0px);
-      -o-transform: translate(0px);
-      transform: translate(0px);
-    }
+  @include animationSlideIn(0.65s,(translateY(0px)));
   }
   #homeCv {
-    background-position: bottom;
+  @include backgroundImagePosition(bottom);
   }
   .homeLinks{
     width:100%;
@@ -887,26 +530,19 @@ body {
     width:100%;
     height: $tablet-photo-height;
     min-height: 250px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
     h2 {
       font-size: 1.5em;
       bottom: -2%;
       right: 5%;
     }
-    &.ng-enter {
-      -webkit-transform: translate(0px);
-      -moz-transform: translate(0px);
-      -o-transform: translate(0px);
-      transform: translate(0px);
-    }
+    @include animationSlideIn(0.65s,(translateX(0px)));
   }
   #aboutContent{
     width: 100%;
     height: auto;
     margin: 2% 0px 0px 0px;
+    @include animationSlideIn(0.65s,(translateX(0px)));
     #aboutDiv{
       h3{
         width: 90%;
@@ -929,12 +565,6 @@ body {
         margin-bottom: 8%;
       }
     }
-    &.ng-enter {
-      -webkit-transform: translate(0px);
-      -moz-transform: translate(0px);
-      -o-transform: translate(0px);
-      transform: translate(0px);
-    }
   }
 //////////////////////////PORTFOLIO/////////////////////////////////////
   .projects {
@@ -953,28 +583,18 @@ body {
     width:100%;
     height: $tablet-photo-height;
     min-height: 250px;
+    @include animationSlideIn(0.65s,(translateX(0px)));
     h2 {
       bottom: -2%;
       right: 5%;
       font-size: 1.5em;
-    }
-    &.ng-enter {
-      -webkit-transform: translateX(0px);
-      -moz-transform: translateX(0px);
-      -o-transform: translateX(0px);
-      transform: translateX(0px);
     }
   }
   #cvContent{
     width: 100%;
     height: auto;
     margin: 2% 0px 0px 0px;
-    &.ng-enter {
-      -webkit-transform: translateX(0px);
-      -moz-transform: translateX(0px);
-      -o-transform: translateX(0px);
-      transform: translateX(0px);
-    }
+    @include animationSlideIn(0.65s,(translateX(0px)));
     #outerDivCV {
       width: 100%;
       height: auto;
@@ -1048,24 +668,14 @@ body {
       right: 5%;
       font-size: 1.5em;
     }
-    &.ng-enter {
-      -webkit-transform: translateX(0px);
-      -moz-transform: translateX(0px);
-      -o-transform: translateX(0px);
-      transform: translateX(0px);
-    }
+    @include animationSlideIn(0.65s,(translateX(0px)));
   }
   #contactContent {
     width: 100%;
     height: 20vh;
     min-height: 200px;
     margin: 2% 0px 0px 0px;
-    &.ng-enter {
-      -webkit-transform: translateX(0px);
-      -moz-transform: translateX(0px);
-      -o-transform: translateX(0px);
-      transform: translateX(0px);
-    }
+    @include animationSlideIn(0.65s,(translateX(0px)));
     div {
       height: 60px;
       width:60%;

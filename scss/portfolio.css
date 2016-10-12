@@ -91,6 +91,22 @@ body {
   height: 90%;
   position: absolute;
   top: 10%; }
+  #innerWrapper.ng-enter {
+    -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
+    opacity: 0; }
+  #innerWrapper.ng-enter.ng-enter-active {
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -o-transform: translate(0);
+    transform: translate(0);
+    opacity: 1; }
   #innerWrapper.ng-leave {
     -webkit-transition: 0.5s linear all;
     -moz-transition: 0.5s linear all;
@@ -116,23 +132,23 @@ body {
   float: left;
   height: 99.8%;
   width: 33%;
-  background-color: red;
-  margin: 1px 1px 1px 1px; }
+  margin: 1px 1px 1px 1px;
+  background-color: red; }
   #homePhoto.ng-enter {
     -webkit-transition: 0.65s linear all;
     -moz-transition: 0.65s linear all;
     -o-transition: 0.65s linear all;
     transition: 0.65s linear all;
-    -webkit-transform: translateX(-35px);
-    -moz-transform: translateX(-35px);
-    -o-transform: translateX(-35px);
-    transform: translateX(-35px);
+    -webkit-transform: translateX(-30px);
+    -moz-transform: translateX(-30px);
+    -o-transform: translateX(-30px);
+    transform: translateX(-30px);
     opacity: 0; }
   #homePhoto.ng-enter.ng-enter-active {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -o-transform: translate(0);
+    transform: translate(0);
     opacity: 1; }
   #homePhoto.ng-leave {
     -webkit-transition: 0.5s linear all;
@@ -159,10 +175,10 @@ body {
     transform: translateY(-30px);
     opacity: 0; }
   #homeAbout.ng-enter.ng-enter-active {
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -o-transform: translate(0);
+    transform: translate(0);
     opacity: 1; }
   #homeAbout.ng-leave {
     -webkit-transition: 0.5s linear all;
@@ -219,10 +235,10 @@ body {
     transform: translateY(30px);
     opacity: 0; }
   #homeCv.ng-enter.ng-enter-active {
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -o-transform: translate(0);
+    transform: translate(0);
     opacity: 1; }
   #homeCv.ng-leave {
     -webkit-transition: 0.5s linear all;
@@ -280,21 +296,14 @@ body {
     color: #363636; }
 
 #aboutPhoto {
+  background-image: url("../photos/aboutPhoto2.png");
   float: left;
   width: 32%;
   height: 100%;
-  background-image: url("../photos/aboutPhoto2.png");
+  position: relative;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  position: relative; }
-  #aboutPhoto h2 {
-    position: absolute;
-    font-size: 1.5em;
-    bottom: -2%;
-    right: 5%;
-    font-family: "Raleway", sans-serif;
-    color: #e3e3e3; }
+  background-size: cover; }
   #aboutPhoto.ng-enter {
     -webkit-transition: 0.65s linear all;
     -moz-transition: 0.65s linear all;
@@ -306,10 +315,10 @@ body {
     transform: translateX(-35px);
     opacity: 0; }
   #aboutPhoto.ng-enter.ng-enter-active {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -o-transform: translate(0);
+    transform: translate(0);
     opacity: 1; }
   #aboutPhoto.ng-leave {
     -webkit-transition: 0.5s linear all;
@@ -319,6 +328,13 @@ body {
     opacity: 1; }
   #aboutPhoto.ng-leave.ng-leave-active {
     opacity: 0; }
+  #aboutPhoto h2 {
+    position: absolute;
+    font-size: 1.5em;
+    bottom: -2%;
+    right: 5%;
+    font-family: "Raleway", sans-serif;
+    color: #e3e3e3; }
 
 #aboutContent {
   float: left;
@@ -327,6 +343,30 @@ body {
   background-color: #e3e3e3;
   position: relative;
   margin: 0px 0px 0px 2px; }
+  #aboutContent.ng-enter {
+    -webkit-transition: 0.65s linear all;
+    -moz-transition: 0.65s linear all;
+    -o-transition: 0.65s linear all;
+    transition: 0.65s linear all;
+    -webkit-transform: translateX(35px);
+    -moz-transform: translateX(35px);
+    -o-transform: translateX(35px);
+    transform: translateX(35px);
+    opacity: 0; }
+  #aboutContent.ng-enter.ng-enter-active {
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -o-transform: translate(0);
+    transform: translate(0);
+    opacity: 1; }
+  #aboutContent.ng-leave {
+    -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+    opacity: 1; }
+  #aboutContent.ng-leave.ng-leave-active {
+    opacity: 0; }
   #aboutContent #aboutDiv {
     position: relative;
     width: 100%; }
@@ -350,48 +390,40 @@ body {
       height: auto;
       float: right;
       margin-right: 15%; }
-  #aboutContent.ng-enter {
-    -webkit-transition: 0.65s linear all;
-    -moz-transition: 0.65s linear all;
-    -o-transition: 0.65s linear all;
-    transition: 0.65s linear all;
-    -webkit-transform: translateX(35px);
-    -moz-transform: translateX(35px);
-    -o-transform: translateX(35px);
-    transform: translateX(35px);
-    opacity: 0; }
-  #aboutContent.ng-enter.ng-enter-active {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1; }
-  #aboutContent.ng-leave {
-    -webkit-transition: 0.5s linear all;
-    -moz-transition: 0.5s linear all;
-    -o-transition: 0.5s linear all;
-    transition: 0.5s linear all;
-    opacity: 1; }
-  #aboutContent.ng-leave.ng-leave-active {
-    opacity: 0; }
 
 .projects {
   float: left;
   width: 49.5%;
   height: 49.5%;
   position: relative;
+  margin: 1px 1px 1px 1px;
   background-position: top;
   background-repeat: no-repeat;
-  background-size: cover;
-  margin: 1px 1px 1px 1px; }
+  background-size: cover; }
   .projects.ng-enter {
-    -webkit-transition: .55s linear all;
-    -moz-transition: .55s linear all;
-    -o-transition: .55s linear all;
-    transition: .55s linear all;
+    -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+    -webkit-transform: translate(0px);
+    -moz-transform: translate(0px);
+    -o-transform: translate(0px);
+    transform: translate(0px);
     opacity: 0; }
   .projects.ng-enter.ng-enter-active {
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -o-transform: translate(0);
+    transform: translate(0);
     opacity: 1; }
+  .projects.ng-leave {
+    -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+    opacity: 1; }
+  .projects.ng-leave.ng-leave-active {
+    opacity: 0; }
   .projects h2 {
     position: absolute;
     bottom: -7%;
@@ -402,33 +434,26 @@ body {
     text-shadow: -1px 0 #363636, 0 1px #363636, 1px 0 #363636, 0 -1px #363636; }
 
 #cvPhoto {
+  background-color: purple;
   float: left;
   width: 32%;
   height: 100%;
-  background-color: purple;
   position: relative; }
-  #cvPhoto h2 {
-    position: absolute;
-    bottom: -2%;
-    right: 5%;
-    font-family: "Raleway", sans-serif;
-    color: #363636;
-    font-size: 1.5em; }
   #cvPhoto.ng-enter {
-    -webkit-transition: 0.65s linear all;
-    -moz-transition: 0.65s linear all;
-    -o-transition: 0.65s linear all;
-    transition: 0.65s linear all;
+    -webkit-transition: 0.55s linear all;
+    -moz-transition: 0.55s linear all;
+    -o-transition: 0.55s linear all;
+    transition: 0.55s linear all;
     -webkit-transform: translateX(-35px);
     -moz-transform: translateX(-35px);
     -o-transform: translateX(-35px);
     transform: translateX(-35px);
     opacity: 0; }
   #cvPhoto.ng-enter.ng-enter-active {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -o-transform: translate(0);
+    transform: translate(0);
     opacity: 1; }
   #cvPhoto.ng-leave {
     -webkit-transition: 0.5s linear all;
@@ -438,6 +463,13 @@ body {
     opacity: 1; }
   #cvPhoto.ng-leave.ng-leave-active {
     opacity: 0; }
+  #cvPhoto h2 {
+    position: absolute;
+    bottom: -2%;
+    right: 5%;
+    font-family: "Raleway", sans-serif;
+    color: #363636;
+    font-size: 1.5em; }
 
 #cvContent {
   float: left;
@@ -457,10 +489,10 @@ body {
     transform: translateX(35px);
     opacity: 0; }
   #cvContent.ng-enter.ng-enter-active {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -o-transform: translate(0);
+    transform: translate(0);
     opacity: 1; }
   #cvContent.ng-leave {
     -webkit-transition: 0.5s linear all;
@@ -529,21 +561,14 @@ body {
           filter: drop-shadow(0px 5px 4px black); }
 
 #contactPhoto {
+  background-image: url("../photos/wireFrameSketch5.png");
   float: left;
   width: 32%;
   height: 100%;
-  background-image: url("../photos/wireFrameSketch5.png");
+  position: relative;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  position: relative; }
-  #contactPhoto h2 {
-    position: absolute;
-    bottom: -2%;
-    right: 5%;
-    font-family: "Raleway", sans-serif;
-    color: #363636;
-    font-size: 1.5em; }
+  background-size: cover; }
   #contactPhoto.ng-enter {
     -webkit-transition: 0.65s linear all;
     -moz-transition: 0.65s linear all;
@@ -555,10 +580,10 @@ body {
     transform: translateX(-35px);
     opacity: 0; }
   #contactPhoto.ng-enter.ng-enter-active {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -o-transform: translate(0);
+    transform: translate(0);
     opacity: 1; }
   #contactPhoto.ng-leave {
     -webkit-transition: 0.5s linear all;
@@ -568,6 +593,13 @@ body {
     opacity: 1; }
   #contactPhoto.ng-leave.ng-leave-active {
     opacity: 0; }
+  #contactPhoto h2 {
+    position: absolute;
+    bottom: -2%;
+    right: 5%;
+    font-family: "Raleway", sans-serif;
+    color: #363636;
+    font-size: 1.5em; }
 
 #contactContent {
   float: left;
@@ -587,10 +619,10 @@ body {
     transform: translateX(35px);
     opacity: 0; }
   #contactContent.ng-enter.ng-enter-active {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -o-transform: translate(0);
+    transform: translate(0);
     opacity: 1; }
   #contactContent.ng-leave {
     -webkit-transition: 0.5s linear all;
@@ -672,13 +704,34 @@ body {
     margin: 0px 0px 0px 0px; }
 
   #homePhoto.ng-enter, #homeAbout.ng-enter, #homePortfolio.ng-enter, #homeCv.ng-enter, #homeContact.ng-enter {
-    -webkit-transform: translate(0px);
-    -moz-transform: translate(0px);
-    -o-transform: translate(0px);
-    transform: translate(0px); }
+    -webkit-transition: 0.65s linear all;
+    -moz-transition: 0.65s linear all;
+    -o-transition: 0.65s linear all;
+    transition: 0.65s linear all;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 0; }
+  #homePhoto.ng-enter.ng-enter-active, #homeAbout.ng-enter.ng-enter-active, #homePortfolio.ng-enter.ng-enter-active, #homeCv.ng-enter.ng-enter-active, #homeContact.ng-enter.ng-enter-active {
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -o-transform: translate(0);
+    transform: translate(0);
+    opacity: 1; }
+  #homePhoto.ng-leave, #homeAbout.ng-leave, #homePortfolio.ng-leave, #homeCv.ng-leave, #homeContact.ng-leave {
+    -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+    opacity: 1; }
+  #homePhoto.ng-leave.ng-leave-active, #homeAbout.ng-leave.ng-leave-active, #homePortfolio.ng-leave.ng-leave-active, #homeCv.ng-leave.ng-leave-active, #homeContact.ng-leave.ng-leave-active {
+    opacity: 0; }
 
   #homeCv {
-    background-position: bottom; }
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover; }
 
   .homeLinks {
     width: 100%;
@@ -695,24 +748,64 @@ body {
     width: 100%;
     height: 60vh;
     min-height: 250px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative; }
     #aboutPhoto h2 {
       font-size: 1.5em;
       bottom: -2%;
       right: 5%; }
     #aboutPhoto.ng-enter {
-      -webkit-transform: translate(0px);
-      -moz-transform: translate(0px);
-      -o-transform: translate(0px);
-      transform: translate(0px); }
+      -webkit-transition: 0.65s linear all;
+      -moz-transition: 0.65s linear all;
+      -o-transition: 0.65s linear all;
+      transition: 0.65s linear all;
+      -webkit-transform: translateX(0px);
+      -moz-transform: translateX(0px);
+      -o-transform: translateX(0px);
+      transform: translateX(0px);
+      opacity: 0; }
+    #aboutPhoto.ng-enter.ng-enter-active {
+      -webkit-transform: translate(0);
+      -moz-transform: translate(0);
+      -o-transform: translate(0);
+      transform: translate(0);
+      opacity: 1; }
+    #aboutPhoto.ng-leave {
+      -webkit-transition: 0.5s linear all;
+      -moz-transition: 0.5s linear all;
+      -o-transition: 0.5s linear all;
+      transition: 0.5s linear all;
+      opacity: 1; }
+    #aboutPhoto.ng-leave.ng-leave-active {
+      opacity: 0; }
 
   #aboutContent {
     width: 100%;
     height: auto;
     margin: 2% 0px 0px 0px; }
+    #aboutContent.ng-enter {
+      -webkit-transition: 0.65s linear all;
+      -moz-transition: 0.65s linear all;
+      -o-transition: 0.65s linear all;
+      transition: 0.65s linear all;
+      -webkit-transform: translateX(0px);
+      -moz-transform: translateX(0px);
+      -o-transform: translateX(0px);
+      transform: translateX(0px);
+      opacity: 0; }
+    #aboutContent.ng-enter.ng-enter-active {
+      -webkit-transform: translate(0);
+      -moz-transform: translate(0);
+      -o-transform: translate(0);
+      transform: translate(0);
+      opacity: 1; }
+    #aboutContent.ng-leave {
+      -webkit-transition: 0.5s linear all;
+      -moz-transition: 0.5s linear all;
+      -o-transition: 0.5s linear all;
+      transition: 0.5s linear all;
+      opacity: 1; }
+    #aboutContent.ng-leave.ng-leave-active {
+      opacity: 0; }
     #aboutContent #aboutDiv h3 {
       width: 90%;
       margin: 8% auto 0% auto;
@@ -729,11 +822,6 @@ body {
       float: right;
       margin-right: 7%;
       margin-bottom: 8%; }
-    #aboutContent.ng-enter {
-      -webkit-transform: translate(0px);
-      -moz-transform: translate(0px);
-      -o-transform: translate(0px);
-      transform: translate(0px); }
 
   .projects {
     width: 100%;
@@ -749,25 +837,63 @@ body {
     width: 100%;
     height: 60vh;
     min-height: 250px; }
+    #cvPhoto.ng-enter {
+      -webkit-transition: 0.65s linear all;
+      -moz-transition: 0.65s linear all;
+      -o-transition: 0.65s linear all;
+      transition: 0.65s linear all;
+      -webkit-transform: translateX(0px);
+      -moz-transform: translateX(0px);
+      -o-transform: translateX(0px);
+      transform: translateX(0px);
+      opacity: 0; }
+    #cvPhoto.ng-enter.ng-enter-active {
+      -webkit-transform: translate(0);
+      -moz-transform: translate(0);
+      -o-transform: translate(0);
+      transform: translate(0);
+      opacity: 1; }
+    #cvPhoto.ng-leave {
+      -webkit-transition: 0.5s linear all;
+      -moz-transition: 0.5s linear all;
+      -o-transition: 0.5s linear all;
+      transition: 0.5s linear all;
+      opacity: 1; }
+    #cvPhoto.ng-leave.ng-leave-active {
+      opacity: 0; }
     #cvPhoto h2 {
       bottom: -2%;
       right: 5%;
       font-size: 1.5em; }
-    #cvPhoto.ng-enter {
-      -webkit-transform: translateX(0px);
-      -moz-transform: translateX(0px);
-      -o-transform: translateX(0px);
-      transform: translateX(0px); }
 
   #cvContent {
     width: 100%;
     height: auto;
     margin: 2% 0px 0px 0px; }
     #cvContent.ng-enter {
+      -webkit-transition: 0.65s linear all;
+      -moz-transition: 0.65s linear all;
+      -o-transition: 0.65s linear all;
+      transition: 0.65s linear all;
       -webkit-transform: translateX(0px);
       -moz-transform: translateX(0px);
       -o-transform: translateX(0px);
-      transform: translateX(0px); }
+      transform: translateX(0px);
+      opacity: 0; }
+    #cvContent.ng-enter.ng-enter-active {
+      -webkit-transform: translate(0);
+      -moz-transform: translate(0);
+      -o-transform: translate(0);
+      transform: translate(0);
+      opacity: 1; }
+    #cvContent.ng-leave {
+      -webkit-transition: 0.5s linear all;
+      -moz-transition: 0.5s linear all;
+      -o-transition: 0.5s linear all;
+      transition: 0.5s linear all;
+      opacity: 1; }
+    #cvContent.ng-leave.ng-leave-active {
+      opacity: 0; }
     #cvContent #outerDivCV {
       width: 100%;
       height: auto;
@@ -825,10 +951,29 @@ body {
       right: 5%;
       font-size: 1.5em; }
     #contactPhoto.ng-enter {
+      -webkit-transition: 0.65s linear all;
+      -moz-transition: 0.65s linear all;
+      -o-transition: 0.65s linear all;
+      transition: 0.65s linear all;
       -webkit-transform: translateX(0px);
       -moz-transform: translateX(0px);
       -o-transform: translateX(0px);
-      transform: translateX(0px); }
+      transform: translateX(0px);
+      opacity: 0; }
+    #contactPhoto.ng-enter.ng-enter-active {
+      -webkit-transform: translate(0);
+      -moz-transform: translate(0);
+      -o-transform: translate(0);
+      transform: translate(0);
+      opacity: 1; }
+    #contactPhoto.ng-leave {
+      -webkit-transition: 0.5s linear all;
+      -moz-transition: 0.5s linear all;
+      -o-transition: 0.5s linear all;
+      transition: 0.5s linear all;
+      opacity: 1; }
+    #contactPhoto.ng-leave.ng-leave-active {
+      opacity: 0; }
 
   #contactContent {
     width: 100%;
@@ -836,10 +981,29 @@ body {
     min-height: 200px;
     margin: 2% 0px 0px 0px; }
     #contactContent.ng-enter {
+      -webkit-transition: 0.65s linear all;
+      -moz-transition: 0.65s linear all;
+      -o-transition: 0.65s linear all;
+      transition: 0.65s linear all;
       -webkit-transform: translateX(0px);
       -moz-transform: translateX(0px);
       -o-transform: translateX(0px);
-      transform: translateX(0px); }
+      transform: translateX(0px);
+      opacity: 0; }
+    #contactContent.ng-enter.ng-enter-active {
+      -webkit-transform: translate(0);
+      -moz-transform: translate(0);
+      -o-transform: translate(0);
+      transform: translate(0);
+      opacity: 1; }
+    #contactContent.ng-leave {
+      -webkit-transition: 0.5s linear all;
+      -moz-transition: 0.5s linear all;
+      -o-transition: 0.5s linear all;
+      transition: 0.5s linear all;
+      opacity: 1; }
+    #contactContent.ng-leave.ng-leave-active {
+      opacity: 0; }
     #contactContent div {
       height: 60px;
       width: 60%; }
