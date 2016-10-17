@@ -74,8 +74,8 @@ var app = angular
   })
   .controller('contactCTRL', function($scope, $timeout){
     $scope.contactItems = [
-      {link:'https://www.linkedin.com/in/anthony-vu-257a417?trk=nav_responsive_tab_profile', photo:'photos/linkedInicon2.png'},
-      {link:'https://github.com/AnthonyVuOD', photo:'photos/githubIcon2.png'},
+      {link:'https://www.linkedin.com/in/anthony-vu-257a417?trk=nav_responsive_tab_profile', photo:'photos/linkedInIcon2.png'},
+      {link:'https://github.com/AnthonyVuOD', photo:'photos/gitHubIcon2.png'},
       {link:'https://www.facebook.com/profile.php?id=2007303', photo:'photos/facebookIcon.png'},
       {link:'mailto:AnthonyVuOD@gmail.com', photo:'photos/gmailIcon2.png'}
     ];
