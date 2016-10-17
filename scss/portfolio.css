@@ -17,74 +17,69 @@ body {
   right: 0;
   bottom: 0; }
 
-#header {
-  width: 100%;
-  height: 10%;
+#header h3 {
   position: absolute;
-  clear: both; }
-  #header h3 {
-    position: absolute;
-    bottom: -35px;
-    right: 0;
-    font-size: 2em;
-    padding-right: 2%;
-    color: #e3e3e3;
-    font-family: "Raleway", sans-serif; }
-    #header h3 span {
-      font-size: .75em;
-      padding-left: 15px;
-      font-family: "Josefin Sans", sans-serif; }
+  bottom: -35px;
+  right: 0;
+  font-size: 2em;
+  padding-right: 2%;
+  color: #e3e3e3;
+  font-family: "Raleway", sans-serif; }
+  #header h3 span {
+    font-size: .75em;
+    padding-left: 15px;
+    font-family: "Josefin Sans", sans-serif; }
 
-#menu {
-  width: 100%;
-  height: 10%;
+#menu ul {
   position: absolute;
-  clear: both; }
-  #menu ul {
-    position: absolute;
-    right: 0px;
-    bottom: -15px;
-    width: 96%; }
-    #menu ul li {
-      float: right;
-      padding-right: 3%;
-      list-style-type: none;
-      position: relative; }
-      #menu ul li a {
-        margin-top: 50px;
-        text-decoration: none;
-        color: #e3e3e3;
-        font-size: 1.25em;
-        font-family: "Raleway", sans-serif; }
-        #menu ul li a:hover {
-          text-decoration: underline; }
-    #menu ul span {
-      float: left;
-      margin-left: -2%;
-      margin-top: -25px; }
+  right: 0px;
+  bottom: -15px;
+  width: 96%; }
+  #menu ul li {
+    float: right;
+    padding-right: 3%;
+    list-style-type: none;
+    position: relative; }
+    #menu ul li a {
+      margin-top: 50px;
+      text-decoration: none;
+      color: #e3e3e3;
+      font-size: 1.25em;
+      font-family: "Raleway", sans-serif; }
+      #menu ul li a:hover {
+        text-decoration: underline; }
+  #menu ul span {
+    float: left;
+    margin-left: -2%;
+    margin-top: -25px; }
 
 #avLogo {
   width: 50px;
   height: auto;
   margin-bottom: -31px; }
 
-.fadeHeaders.ng-enter {
-  -webkit-transition: .75s linear all;
-  -moz-transition: .75s linear all;
-  -o-transition: .75s linear all;
-  transition: .75s linear all;
-  opacity: 0; }
-.fadeHeaders.ng-enter.ng-enter-active {
-  -webkit-transition-delay: .75s;
-  opacity: 1; }
-.fadeHeaders.ng-leave {
-  -webkit-transition: 0.5s linear all;
-  -moz-transition: 0.5s linear all;
-  -o-transition: 0.5s linear all;
-  transition: 0.5s linear all;
-  opacity: 1; }
-.fadeHeaders.ng-leave.ng-leave-active {
-  opacity: 0; }
+.fadeHeaders {
+  width: 100%;
+  height: 10%;
+  position: absolute;
+  clear: both; }
+  .fadeHeaders.ng-enter {
+    -webkit-transition: .75s linear all;
+    -moz-transition: .75s linear all;
+    -o-transition: .75s linear all;
+    transition: .75s linear all;
+    opacity: 0; }
+  .fadeHeaders.ng-enter.ng-enter-active {
+    -webkit-transition-delay: .75s;
+    opacity: 1; }
+  .fadeHeaders.ng-leave {
+    -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+    opacity: 1; }
+  .fadeHeaders.ng-leave.ng-leave-active {
+    opacity: 0; }
 
 #innerWrapper {
   width: 100%;
@@ -128,17 +123,17 @@ body {
   font-family: "Josefin Sans", sans-serif; }
 
 #homePhoto {
-  position: relative;
-  float: left;
-  height: 99.8%;
-  width: 33%;
-  margin: 1px 1px 1px 1px;
-  background-color: red; }
+  height: 99.9%;
+  width: 33.45%;
+  background-color: red;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
   #homePhoto.ng-enter {
-    -webkit-transition: 0.65s linear all;
-    -moz-transition: 0.65s linear all;
-    -o-transition: 0.65s linear all;
-    transition: 0.65s linear all;
+    -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
     -webkit-transform: translateX(-30px);
     -moz-transform: translateX(-30px);
     -o-transform: translateX(-30px);
@@ -161,14 +156,16 @@ body {
 
 #homeAbout {
   background-image: url(../photos/rope3.png);
-  background-position: bottom left;
+  background-position: bottom;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  width: 33%;
+  height: 49.75%; }
   #homeAbout.ng-enter {
-    -webkit-transition: 0.65s linear all;
-    -moz-transition: 0.65s linear all;
-    -o-transition: 0.65s linear all;
-    transition: 0.65s linear all;
+    -webkit-transition: 0.6s linear all;
+    -moz-transition: 0.6s linear all;
+    -o-transition: 0.6s linear all;
+    transition: 0.6s linear all;
     -webkit-transform: translateY(-30px);
     -moz-transform: translateY(-30px);
     -o-transform: translateY(-30px);
@@ -193,12 +190,14 @@ body {
   background-image: url(../photos/computer2.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  width: 33%;
+  height: 49.75%; }
   #homePortfolio.ng-enter {
-    -webkit-transition: 0.65s linear all;
-    -moz-transition: 0.65s linear all;
-    -o-transition: 0.65s linear all;
-    transition: 0.65s linear all;
+    -webkit-transition: 0.6s linear all;
+    -moz-transition: 0.6s linear all;
+    -o-transition: 0.6s linear all;
+    transition: 0.6s linear all;
     -webkit-transform: translate(30px, -30px);
     -moz-transform: translate(30px, -30px);
     -o-transform: translate(30px, -30px);
@@ -223,12 +222,14 @@ body {
   background-image: url(../photos/guitar.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  width: 33%;
+  height: 49.75%; }
   #homeCv.ng-enter {
-    -webkit-transition: 0.65s linear all;
-    -moz-transition: 0.65s linear all;
-    -o-transition: 0.65s linear all;
-    transition: 0.65s linear all;
+    -webkit-transition: 0.6s linear all;
+    -moz-transition: 0.6s linear all;
+    -o-transition: 0.6s linear all;
+    transition: 0.6s linear all;
     -webkit-transform: translateY(30px);
     -moz-transform: translateY(30px);
     -o-transform: translateY(30px);
@@ -253,12 +254,14 @@ body {
   background-image: url(../photos/pen.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  width: 33%;
+  height: 49.75%; }
   #homeContact.ng-enter {
-    -webkit-transition: 0.65s linear all;
-    -moz-transition: 0.65s linear all;
-    -o-transition: 0.65s linear all;
-    transition: 0.65s linear all;
+    -webkit-transition: 0.6s linear all;
+    -moz-transition: 0.6s linear all;
+    -o-transition: 0.6s linear all;
+    transition: 0.6s linear all;
     -webkit-transform: translate(25px, 25px);
     -moz-transform: translate(25px, 25px);
     -o-transform: translate(25px, 25px);
@@ -282,8 +285,6 @@ body {
 .homeLinks {
   position: relative;
   float: left;
-  width: 33%;
-  height: 49.75%;
   margin: 1px 1px 1px 1px; }
   .homeLinks:hover {
     cursor: pointer; }
@@ -297,13 +298,13 @@ body {
 
 #aboutPhoto {
   background-image: url("../photos/aboutPhoto2.png");
-  float: left;
-  width: 32%;
-  height: 100%;
-  position: relative;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  float: left;
+  width: 33%;
+  height: 100%;
+  position: relative; }
   #aboutPhoto.ng-enter {
     -webkit-transition: 0.65s linear all;
     -moz-transition: 0.65s linear all;
@@ -330,15 +331,15 @@ body {
     opacity: 0; }
   #aboutPhoto h2 {
     position: absolute;
-    font-size: 1.5em;
     bottom: -2%;
     right: 5%;
     font-family: "Raleway", sans-serif;
-    color: #e3e3e3; }
+    color: #363636;
+    font-size: 1.5em; }
 
 #aboutContent {
   float: left;
-  width: 67%;
+  width: 66.75%;
   height: 100%;
   background-color: #e3e3e3;
   position: relative;
@@ -393,7 +394,7 @@ body {
 
 .projects {
   float: left;
-  width: 49.5%;
+  width: 49.8%;
   height: 49.5%;
   position: relative;
   margin: 1px 1px 1px 1px;
@@ -435,8 +436,11 @@ body {
 
 #cvPhoto {
   background-color: purple;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   float: left;
-  width: 32%;
+  width: 33%;
   height: 100%;
   position: relative; }
   #cvPhoto.ng-enter {
@@ -473,11 +477,11 @@ body {
 
 #cvContent {
   float: left;
-  width: 67%;
+  width: 66.75%;
   height: 100%;
   background-color: #e3e3e3;
-  margin: 0px 0px 0px 2px;
-  position: relative; }
+  position: relative;
+  margin: 0px 0px 0px 2px; }
   #cvContent.ng-enter {
     -webkit-transition: 0.65s linear all;
     -moz-transition: 0.65s linear all;
@@ -563,7 +567,7 @@ body {
 #contactPhoto {
   background-image: url("../photos/wireFrameSketch5.png");
   float: left;
-  width: 32%;
+  width: 33%;
   height: 100%;
   position: relative;
   background-position: center;
@@ -603,10 +607,10 @@ body {
 
 #contactContent {
   float: left;
-  width: 67%;
+  width: 66.75%;
   height: 100%;
-  position: relative;
   background-color: #e3e3e3;
+  position: relative;
   margin: 0px 0px 0px 2px; }
   #contactContent.ng-enter {
     -webkit-transition: 0.65s linear all;
@@ -660,7 +664,6 @@ body {
 
 @media screen and (max-width: 1025px) {
   body {
-    font-size: 16px;
     height: auto; }
 
   #outerWrapper {
@@ -683,10 +686,8 @@ body {
       #menu ul li {
         padding-right: 2%;
         margin-bottom: 3%; }
-        #menu ul li a {
-          font-size: 1.5em; }
       #menu ul span {
-        margin-top: -22px; }
+        margin-top: -25px; }
 
   #innerWrapper {
     width: 100%;
@@ -702,57 +703,78 @@ body {
     min-height: 250px;
     width: 100%;
     margin: 0px 0px 0px 0px; }
+    #homePhoto.ng-enter {
+      -webkit-transition: 0.65s linear all;
+      -moz-transition: 0.65s linear all;
+      -o-transition: 0.65s linear all;
+      transition: 0.65s linear all;
+      -webkit-transform: translateY(0px);
+      -moz-transform: translateY(0px);
+      -o-transform: translateY(0px);
+      transform: translateY(0px);
+      opacity: 0; }
+    #homePhoto.ng-enter.ng-enter-active {
+      -webkit-transform: translate(0);
+      -moz-transform: translate(0);
+      -o-transform: translate(0);
+      transform: translate(0);
+      opacity: 1; }
+    #homePhoto.ng-leave {
+      -webkit-transition: 0.5s linear all;
+      -moz-transition: 0.5s linear all;
+      -o-transition: 0.5s linear all;
+      transition: 0.5s linear all;
+      opacity: 1; }
+    #homePhoto.ng-leave.ng-leave-active {
+      opacity: 0; }
 
-  #homePhoto.ng-enter, #homeAbout.ng-enter, #homePortfolio.ng-enter, #homeCv.ng-enter, #homeContact.ng-enter {
-    -webkit-transition: 0.65s linear all;
-    -moz-transition: 0.65s linear all;
-    -o-transition: 0.65s linear all;
-    transition: 0.65s linear all;
-    -webkit-transform: translateY(0px);
-    -moz-transform: translateY(0px);
-    -o-transform: translateY(0px);
-    transform: translateY(0px);
-    opacity: 0; }
-  #homePhoto.ng-enter.ng-enter-active, #homeAbout.ng-enter.ng-enter-active, #homePortfolio.ng-enter.ng-enter-active, #homeCv.ng-enter.ng-enter-active, #homeContact.ng-enter.ng-enter-active {
-    -webkit-transform: translate(0);
-    -moz-transform: translate(0);
-    -o-transform: translate(0);
-    transform: translate(0);
-    opacity: 1; }
-  #homePhoto.ng-leave, #homeAbout.ng-leave, #homePortfolio.ng-leave, #homeCv.ng-leave, #homeContact.ng-leave {
-    -webkit-transition: 0.5s linear all;
-    -moz-transition: 0.5s linear all;
-    -o-transition: 0.5s linear all;
-    transition: 0.5s linear all;
-    opacity: 1; }
-  #homePhoto.ng-leave.ng-leave-active, #homeAbout.ng-leave.ng-leave-active, #homePortfolio.ng-leave.ng-leave-active, #homeCv.ng-leave.ng-leave-active, #homeContact.ng-leave.ng-leave-active {
-    opacity: 0; }
+  #homeAbout, #homePortfolio, #homeCv, #homeContact {
+    width: 100%;
+    height: 20vh;
+    min-height: 125px;
+    margin: 2% 0px 0px 0px; }
+    #homeAbout.ng-enter, #homePortfolio.ng-enter, #homeCv.ng-enter, #homeContact.ng-enter {
+      -webkit-transition: 0.65s linear all;
+      -moz-transition: 0.65s linear all;
+      -o-transition: 0.65s linear all;
+      transition: 0.65s linear all;
+      -webkit-transform: translateY(0px);
+      -moz-transform: translateY(0px);
+      -o-transform: translateY(0px);
+      transform: translateY(0px);
+      opacity: 0; }
+    #homeAbout.ng-enter.ng-enter-active, #homePortfolio.ng-enter.ng-enter-active, #homeCv.ng-enter.ng-enter-active, #homeContact.ng-enter.ng-enter-active {
+      -webkit-transform: translate(0);
+      -moz-transform: translate(0);
+      -o-transform: translate(0);
+      transform: translate(0);
+      opacity: 1; }
+    #homeAbout.ng-leave, #homePortfolio.ng-leave, #homeCv.ng-leave, #homeContact.ng-leave {
+      -webkit-transition: 0.5s linear all;
+      -moz-transition: 0.5s linear all;
+      -o-transition: 0.5s linear all;
+      transition: 0.5s linear all;
+      opacity: 1; }
+    #homeAbout.ng-leave.ng-leave-active, #homePortfolio.ng-leave.ng-leave-active, #homeCv.ng-leave.ng-leave-active, #homeContact.ng-leave.ng-leave-active {
+      opacity: 0; }
+    #homeAbout h2, #homePortfolio h2, #homeCv h2, #homeContact h2 {
+      font-size: 1.5em;
+      bottom: -3%;
+      right: 5%; }
 
   #homeCv {
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover; }
 
-  .homeLinks {
-    width: 100%;
-    height: 20vh;
-    min-height: 125px;
-    margin: 2% 0px 0px 0px; }
-    .homeLinks h2 {
-      font-size: 1.5em;
-      bottom: -3%;
-      right: 5%; }
-
   #aboutPhoto {
-    float: left;
     width: 100%;
     height: 60vh;
-    min-height: 250px;
-    position: relative; }
+    min-height: 250px; }
     #aboutPhoto h2 {
-      font-size: 1.5em;
       bottom: -2%;
-      right: 5%; }
+      right: 5%;
+      font-size: 1.5em; }
     #aboutPhoto.ng-enter {
       -webkit-transition: 0.65s linear all;
       -moz-transition: 0.65s linear all;
@@ -907,8 +929,7 @@ body {
         height: auto;
         margin: 0 auto; }
         #cvContent #outerDivCV .innerDivCV h2 {
-          font-size: 1.5em;
-          text-decoration: underline; }
+          font-size: 1.5em; }
         #cvContent #outerDivCV .innerDivCV table {
           width: 95%;
           margin: 0 auto; }
@@ -916,9 +937,6 @@ body {
             text-align: left; }
           #cvContent #outerDivCV .innerDivCV table .rightColumn {
             text-align: right; }
-          #cvContent #outerDivCV .innerDivCV table span {
-            color: black;
-            font-weight: bolder; }
       #cvContent #outerDivCV .innerDivCValt {
         float: left;
         width: 100%;
@@ -931,16 +949,10 @@ body {
         #cvContent #outerDivCV .innerDivCValt table {
           width: 75%;
           margin: -4% auto; }
-          #cvContent #outerDivCV .innerDivCValt table ul {
-            list-style-type: none;
-            text-align: left; }
         #cvContent #outerDivCV .innerDivCValt a {
           margin: 4% auto;
           display: block;
           width: 20%; }
-          #cvContent #outerDivCV .innerDivCValt a img {
-            width: 40px;
-            height: auto; }
 
   #contactPhoto {
     width: 100%;
@@ -1008,26 +1020,19 @@ body {
       height: 60px;
       width: 60%; }
       #contactContent div .socialMediaLinks {
-        display: block;
         height: 45px;
-        width: 25%;
-        position: relative;
-        float: left;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: auto 100%;
-        -webkit-filter: brightness(75%);
-        /* Chrome, Safari, Opera */
-        filter: brightness(75%); } }
+        width: 25%; } }
 @media screen and (max-width: 700px) {
   body {
-    font-size: 18px;
+    font-size: 15px;
     height: auto; }
 
   #header {
     height: 75px; }
-    #header h3 span {
-      display: none; }
+    #header h3 {
+      font-size: 2em; }
+      #header h3 span {
+        display: none; }
 
   #outerWrapper {
     width: 80%;
@@ -1039,11 +1044,9 @@ body {
     padding-bottom: 8%; }
 
   #menu {
-    height: 75px; }
-    #menu ul li a {
-      font-size: 1em; }
+    height: 70px; }
     #menu ul span {
-      margin-top: -30px; }
+      margin-top: -25px; }
 
   #aboutContent #aboutDiv img {
     width: 50%; }
@@ -1057,8 +1060,6 @@ body {
 
   #header {
     height: 74px; }
-    #header h3 span {
-      display: none; }
 
   #outerWrapper {
     width: 100%;
@@ -1081,5 +1082,10 @@ body {
 
   #cvContent #outerDivCV .innerDivCValt table {
     width: 100%; } }
+@media screen and (max-width: 350px) {
+  #menu ul {
+    bottom: -10px; }
+    #menu ul span {
+      display: none; } }
 
 /*# sourceMappingURL=portfolio.css.map */

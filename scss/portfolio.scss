@@ -4,7 +4,7 @@ $secondary-color: #e3e3e3; //white
 $primary-font: 'Raleway', sans-serif;
 $secondary-font: 'Josefin Sans', sans-serif;
 $tablet-photo-height: 60vh;
-//////////////////////////////////////////////Mixins//////////////////////////
+//////////////////////////////////////////////MIXINS//////////////////////////
 @mixin animationSlideIn($fadeInTime, $slideIn) {
   &.ng-enter {
     -webkit-transition: ($fadeInTime) linear all;
@@ -45,11 +45,36 @@ $tablet-photo-height: 60vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
+@mixin homeDivSize() {
+  width:33%;
+  height: 49.75%;
+}
 @mixin templatePhotos() {
   float: left;
-  width:32%;
+  width:33%;
   height: 100%;
   position: relative;
+}
+@mixin templateContent() {
+  float: left;
+  width: 66.75%;
+  height: 100%;
+  background-color:$secondary-color;
+  position: relative;
+  margin: 0px 0px 0px 2px;
+}
+@mixin templatePhotoTitle() {
+  position: absolute;
+  bottom: -2%;
+  right: 5%;
+  font-family: $primary-font;
+  color: $primary-color;
+  font-size: 1.5em;
+}
+@mixin templatePhotoTitleTablet() {
+  bottom: -2%;
+  right: 5%;
+  font-size: 1.5em;
 }
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -76,10 +101,6 @@ body {
   bottom:0;
 }
 #header{
-  width:100%;
-  height: 10%;
-  position: absolute;
-  clear: both;
   h3{
     position: absolute;
     bottom: -35px;
@@ -96,10 +117,6 @@ body {
   }
 }
 #menu{
-  width:100%;
-  height: 10%;
-  position: absolute;
-  clear: both;
   ul{
     position: absolute;
     right: 0px;
@@ -134,6 +151,10 @@ body {
   margin-bottom: -31px;
 }
 .fadeHeaders{
+  width:100%;
+  height: 10%;
+  position: absolute;
+  clear: both;
   &.ng-enter {
     -webkit-transition:.75s linear all;
     -moz-transition:.75s linear all;
@@ -179,39 +200,39 @@ body {
 }
 ///////////////////////////////////////HOME/////////////////////////////////////
 #homePhoto{
-  position: relative;
-  float: left;
-  height:99.8%;
-  width:33%;
-  margin: 1px 1px 1px 1px;
+  height:99.9%;
+  width:33.45%;
   background-color: red;
-  @include animationSlideIn(0.65s,(translateX(-30px)));
+  @include backgroundImagePosition(center);
+  @include animationSlideIn(0.5s,(translateX(-30px)));
 }
 #homeAbout{
   background-image: url(../photos/rope3.png);
-  @include backgroundImagePosition(bottom left);
-  @include animationSlideIn(0.65s,(translateY(-30px)));
+  @include backgroundImagePosition(bottom);
+  @include animationSlideIn(0.6s,(translateY(-30px)));
+  @include homeDivSize;
 }
 #homePortfolio{
   background-image: url(../photos/computer2.png);
   @include backgroundImagePosition(center);
-  @include animationSlideIn(0.65s,(translate(30px,-30px)));
+  @include animationSlideIn(0.6s,(translate(30px,-30px)));
+  @include homeDivSize;
 }
 #homeCv{
   background-image: url(../photos/guitar.png);
   @include backgroundImagePosition(center);
-  @include animationSlideIn(0.65s,(translateY(30px)));
+  @include animationSlideIn(0.6s,(translateY(30px)));
+  @include homeDivSize;
 }
 #homeContact{
   background-image: url(../photos/pen.png);
   @include backgroundImagePosition(center);
-  @include animationSlideIn(0.65s,(translate(25px,25px)));
+  @include animationSlideIn(0.6s,(translate(25px,25px)));
+  @include homeDivSize;
 }
 .homeLinks{
   position: relative;
   float: left;
-  width:33%;
-  height: 49.75%;
   margin: 1px 1px 1px 1px;
   &:hover{
     cursor: pointer;
@@ -227,32 +248,17 @@ body {
 }
 //////////////////////////////////////ABOUT/////////////////////////////////////
 #aboutPhoto {
-
-  // float: left;
-  // width:32%;
-  // height: 100%;
-  // position: relative;
   background-image: url('../photos/aboutPhoto2.png');
-  @include templatePhotos();
   @include backgroundImagePosition(center);
+  @include templatePhotos();
   @include animationSlideIn(0.65s,(translateX(-35px)));
   h2 {
-    position: absolute;
-    font-size: 1.5em;
-    bottom: -2%;
-    right: 5%;
-    font-family: $primary-font;
-    color: $secondary-color;
+    @include templatePhotoTitle();
   }
 
 }
 #aboutContent{
-  float: left;
-  width: 67%;
-  height: 100%;
-  background-color:$secondary-color;
-  position: relative;
-  margin: 0px 0px 0px 2px;
+  @include templateContent();
   @include animationSlideIn(0.65s,(translateX(35px)));
   #aboutDiv{
     position: relative;
@@ -286,7 +292,7 @@ body {
 ///////////////////////////////////////PORTFOLIO/////////////////////////////////////
 .projects {
   float: left;
-  width: 49.5%;
+  width: 49.8%;
   height: 49.5%;
   position: relative;
   margin: 1px 1px 1px 1px;
@@ -306,24 +312,15 @@ body {
 ///////////////////////////////////////CV/////////////////////////////////////
 #cvPhoto {
   background-color: purple;
+  @include backgroundImagePosition(center);
   @include templatePhotos();
   @include animationSlideIn(0.55s,(translateX(-35px)));
   h2 {
-    position: absolute;
-    bottom: -2%;
-    right: 5%;
-    font-family: $primary-font;
-    color: $primary-color;
-    font-size: 1.5em;
+    @include templatePhotoTitle();
   }
 }
 #cvContent{
-  float: left;
-  width: 67%;
-  height: 100%;
-  background-color:$secondary-color;
-  margin: 0px 0px 0px 2px;
-  position: relative;
+  @include templateContent();
   @include animationSlideIn(0.65s,(translateX(35px)));
   #outerDivCV {
     width: 95%;
@@ -407,24 +404,13 @@ body {
   @include backgroundImagePosition(center);
   @include animationSlideIn(0.65s,(translateX(-35px)));
   h2 {
-    position: absolute;
-    bottom: -2%;
-    right: 5%;
-    font-family: $primary-font;
-    color: $primary-color;
-    font-size: 1.5em;
+    @include templatePhotoTitle();
   }
 }
 #contactContent {
-  float: left;
-  width: 67%;
-  height: 100%;
-  position: relative;
-  background-color:$secondary-color;
-  margin: 0px 0px 0px 2px;
+  @include templateContent();
   @include animationSlideIn(0.65s,(translateX(35px)));
   div {
-    // background-color: yellow;
     position: relative;
     height: 60px;
     width:400px;
@@ -437,14 +423,11 @@ body {
       width: 25%;
       position: relative;
       float: left;
-      // margin: 0% 2.5% 0% 2.5%;
       background-position: center;
       background-repeat: no-repeat;
       background-size: auto 100%;
       -webkit-filter: brightness(75%); /* Chrome, Safari, Opera */
       filter: brightness(75%);
-      // -webkit-transition: 1s linear; /* Safari */
-      // transition: 1s linear;
       &:hover {
         -webkit-filter: brightness(100%); /* Chrome, Safari, Opera */
         filter: brightness(100%);
@@ -458,7 +441,6 @@ body {
 @media screen and (max-width: 1025px){
 ////////////////////// INDEX/////////////////////////////////////////////////////////////////
   body {
-    font-size: 16px;
     height: auto;
   }
   #outerWrapper {
@@ -482,12 +464,9 @@ body {
       li{
         padding-right: 2%;
         margin-bottom: 3%;
-        a {
-          font-size: 1.5em;
-        }
       }
       span{
-        margin-top: -22px;
+        margin-top: -25px;
       }
     }
   }
@@ -506,14 +485,10 @@ body {
     min-height: 250px;
     width:100%;
     margin: 0px 0px 0px 0px;
+    @include animationSlideIn(0.65s,(translateY(0px)));
   }
-  #homePhoto, #homeAbout, #homePortfolio, #homeCv, #homeContact{
-  @include animationSlideIn(0.65s,(translateY(0px)));
-  }
-  #homeCv {
-  @include backgroundImagePosition(bottom);
-  }
-  .homeLinks{
+  #homeAbout, #homePortfolio, #homeCv, #homeContact{
+    @include animationSlideIn(0.65s,(translateY(0px)));
     width:100%;
     height: 20vh;
     min-height: 125px;
@@ -524,17 +499,16 @@ body {
       right:5%;
     }
   }
+  #homeCv {
+    @include backgroundImagePosition(bottom);
+  }
 ////////////////////////////ABOUT///////////////////////
   #aboutPhoto {
-    float: left;
     width:100%;
     height: $tablet-photo-height;
     min-height: 250px;
-    position: relative;
     h2 {
-      font-size: 1.5em;
-      bottom: -2%;
-      right: 5%;
+      @include templatePhotoTitleTablet();
     }
     @include animationSlideIn(0.65s,(translateX(0px)));
   }
@@ -585,9 +559,7 @@ body {
     min-height: 250px;
     @include animationSlideIn(0.65s,(translateX(0px)));
     h2 {
-      bottom: -2%;
-      right: 5%;
-      font-size: 1.5em;
+      @include templatePhotoTitleTablet();
     }
   }
   #cvContent{
@@ -609,10 +581,8 @@ body {
         margin:0 auto;
         h2{;
           font-size: 1.5em;
-          text-decoration: underline;
         }
         table{
-          // border: 1px solid black;
           width:95%;
           margin: 0 auto;
           .leftColumn {
@@ -620,10 +590,6 @@ body {
           }
           .rightColumn {
             text-align: right;
-          }
-          span{
-            color: black;
-            font-weight: bolder;
           }
         }
       }
@@ -638,22 +604,14 @@ body {
           text-decoration: underline;
         }
         table{
-          // border: 1px solid black;
           width: 75%;
           margin: -4% auto;
-          ul {
-            list-style-type: none;
-            text-align: left;
-          }
         }
         a {
           margin: 4% auto;
           display: block;
           width: 20%;
-          img{
-            width: 40px;
-            height: auto;
-          }
+
         }
       }
     }
@@ -664,9 +622,7 @@ body {
     height: $tablet-photo-height;
     min-height: 250px;
     h2 {
-      bottom: -2%;
-      right: 5%;
-      font-size: 1.5em;
+      @include templatePhotoTitleTablet();
     }
     @include animationSlideIn(0.65s,(translateX(0px)));
   }
@@ -680,34 +636,24 @@ body {
       height: 60px;
       width:60%;
       .socialMediaLinks {
-        display: block;
         height: 45px;
         width: 25%;
-        position: relative;
-        float: left;
-        // margin: 0% 2.5% 0% 2.5%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: auto 100%;
-        -webkit-filter: brightness(75%); /* Chrome, Safari, Opera */
-        filter: brightness(75%);
-        // -webkit-transition: 1s linear; /* Safari */
-        // transition: 1s linear;
       }
     }
   }
 
 }
-/////////////////////////////Phones in landscape view/////////////////////////////////
+/////////////////////////////Smart phones in landscape view/////////////////////////////////
 @media screen and (max-width: 700px){
 ////////////////////// INDEX/////////////////////////////////////////////////////////////////
   body {
-    font-size: 18px;
+    font-size: 15px;
     height: auto;
   }
   #header{
     height:75px;
     h3{
+      font-size: 2em;
       span{
         display: none;
       }
@@ -724,15 +670,10 @@ body {
     padding-bottom: 8%;
   }
   #menu{
-    height: 75px;
+    height: 70px;
     ul{
-      li{
-        a {
-          font-size: 1em;
-        }
-      }
       span{
-        margin-top: -30px;
+        margin-top: -25px;
       }
     }
   }
@@ -749,7 +690,7 @@ body {
     }
   }
 }
-/////////////////////////////Phones in portrait view/////////////////////////////////
+/////////////////////////////Smart phones in portrait view/////////////////////////////////
 @media screen and (max-width: 500px){
 ////////////////////// INDEX/////////////////////////////////////////////////////////////////
   body {
@@ -758,11 +699,6 @@ body {
   }
   #header{
     height:74px;
-    h3{
-      span{
-        display: none;
-      }
-    }
   }
   #outerWrapper {
     width:100%;
@@ -799,6 +735,17 @@ body {
         table{
           width: 100%;
         }
+      }
+    }
+  }
+}
+//////////////////////Small smart phones in portrait view////////////////////
+@media screen and (max-width: 350px){
+  #menu{
+    ul{
+      bottom: -10px;
+      span {
+        display: none;
       }
     }
   }
