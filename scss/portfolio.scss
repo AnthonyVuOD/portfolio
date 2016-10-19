@@ -7,10 +7,10 @@ $tablet-photo-height: 60vh;
 //////////////////////////////////////////////MIXINS//////////////////////////
 @mixin animationSlideIn($fadeInTime, $slideIn) {
   &.ng-enter {
-    -webkit-transition: ($fadeInTime) linear all;
-    -moz-transition: ($fadeInTime) linear all;
-    -o-transition: ($fadeInTime) linear all;
-    transition: ($fadeInTime) linear all;
+    -webkit-transition: ($fadeInTime) ease-in all;
+    -moz-transition: ($fadeInTime) ease-in all;
+    -o-transition: ($fadeInTime) ease-in all;
+    transition: ($fadeInTime) ease-in all;
 
     -webkit-transform: ($slideIn);
     -moz-transform: ($slideIn);
@@ -311,7 +311,7 @@ body {
 
 ///////////////////////////////////////CV/////////////////////////////////////
 #cvPhoto {
-  background-color: purple;
+  background-image: url('../photos/computerDesk.png');
   @include backgroundImagePosition(center);
   @include templatePhotos();
   @include animationSlideIn(0.55s,(translateX(-35px)));
@@ -410,17 +410,18 @@ body {
 #contactContent {
   @include templateContent();
   @include animationSlideIn(0.65s,(translateX(35px)));
+  position: relative;
   div {
     position: relative;
     height: 60px;
-    width:400px;
-    margin: auto;
+    width:50%;
+    margin: 0 auto;
     top: 50%;
     transform: translateY(-50%);
     .socialMediaLinks {
       display: block;
       height: 60px;
-      width: 25%;
+      width: 33.33%;
       position: relative;
       float: left;
       background-position: center;
@@ -637,7 +638,6 @@ body {
       width:60%;
       .socialMediaLinks {
         height: 45px;
-        width: 25%;
       }
     }
   }
@@ -747,6 +747,26 @@ body {
       span {
         display: none;
       }
+    }
+  }
+  #cvContent{
+    #outerDivCV {
+      font-size: 1.15em;
+      // .innerDivCV {
+      //   h2{
+      //     font-size: 1.5em;
+      //   }
+      // }
+      // .innerDivCValt {
+      //   h2{
+      //     font-size: 1.5em;
+      //   }
+      // }
+    }
+  }
+  #contactContent {
+    div {
+      width:75%;
     }
   }
 }
