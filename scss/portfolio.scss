@@ -254,6 +254,7 @@ body {
   @include animationSlideIn(0.65s,(translateX(-35px)));
   h2 {
     @include templatePhotoTitle();
+    color: white;
   }
 
 }
