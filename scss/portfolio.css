@@ -542,7 +542,8 @@ body {
       width: 100%;
       height: 60%;
       text-align: center;
-      position: relative; }
+      position: relative;
+      margin: -2% auto; }
       #cvContent #outerDivCV .innerDivCValt h2 {
         font-family: "Josefin Sans", sans-serif;
         font-size: 1.5em;
@@ -554,8 +555,10 @@ body {
         #cvContent #outerDivCV .innerDivCValt table ul {
           list-style-type: none;
           text-align: left; }
+          #cvContent #outerDivCV .innerDivCValt table ul li {
+            margin-top: 0px; }
       #cvContent #outerDivCV .innerDivCValt a {
-        margin: 4% auto;
+        margin: 3% auto;
         display: block;
         width: 10%; }
         #cvContent #outerDivCV .innerDivCValt a img {

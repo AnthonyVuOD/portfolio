@@ -366,6 +366,7 @@ body {
       height: 60%;
       text-align: center;
       position: relative;
+      margin: -2% auto;
       h2{
         font-family: $secondary-font;
         font-size: 1.5em;
@@ -373,16 +374,18 @@ body {
         text-decoration: underline;
       }
       table{
-        // border: 1px solid black;
         width: 50%;
         margin: -4% auto;
         ul {
           list-style-type: none;
           text-align: left;
+          li{
+            margin-top: 0px;
+          }
         }
       }
       a {
-        margin: 4% auto;
+        margin: 3% auto;
         display: block;
         width: 10%;
         img{
