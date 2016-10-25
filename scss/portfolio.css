@@ -155,7 +155,7 @@ body {
     opacity: 0; }
 
 #homeAbout {
-  background-image: url(../photos/rope3.png);
+  background-image: url(../photos/rope3.jpg);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -187,7 +187,7 @@ body {
     opacity: 0; }
 
 #homePortfolio {
-  background-image: url(../photos/computer2.png);
+  background-image: url(../photos/computer2.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -219,7 +219,7 @@ body {
     opacity: 0; }
 
 #homeCv {
-  background-image: url(../photos/guitar.png);
+  background-image: url(../photos/guitar.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -251,7 +251,7 @@ body {
     opacity: 0; }
 
 #homeContact {
-  background-image: url(../photos/pen.png);
+  background-image: url(../photos/pen.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -297,7 +297,7 @@ body {
     color: #363636; }
 
 #aboutPhoto {
-  background-image: url("../photos/aboutPhoto2.png");
+  background-image: url("../photos/aboutPhoto2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -436,7 +436,7 @@ body {
     text-shadow: -1px 0 #363636, 0 1px #363636, 1px 0 #363636, 0 -1px #363636; }
 
 #cvPhoto {
-  background-image: url("../photos/computerDesk.png");
+  background-image: url("../photos/computerDesk.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -569,7 +569,7 @@ body {
           filter: drop-shadow(0px 5px 4px black); }
 
 #contactPhoto {
-  background-image: url("../photos/wireFrameSketch5.png");
+  background-image: url("../photos/wireFrameSketch5.jpg");
   float: left;
   width: 33%;
   height: 100%;

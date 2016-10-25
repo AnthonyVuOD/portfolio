@@ -24,10 +24,12 @@
   <body ng-app="portfolioModule" ng-controller="indexCTRL">
     <div id="outerWrapper">
 
+      <!-- Homepage header -->
       <div id="header" class="fadeHeaders" ng-if="landingPage && fade">
         <h3>ANTHONY VU<span>Front-End Web Developer</span></h3>
       </div>
 
+      <!-- Menu header when not on home page-->
       <div id="menu" class="fadeHeaders" ng-if="!landingPage && fade">
         <ul>
           <li><a href="#/contact" class="underline">Contact</a></li>

@@ -1,5 +1,6 @@
 var app = angular
   .module('portfolioModule',['ngRoute','ngAnimate'])
+  // will indicates what templated are used
   .config(function($routeProvider){
     $routeProvider.caseInsensitiveMatch= true;
     $routeProvider
@@ -31,7 +32,7 @@ var app = angular
     $rootScope.$on('$routeChangeSuccess', function(){
       $scope.landingPage = $location.path() === '/home';
     });
-
+    // fade controls delay when images and headers appear
     $scope.fade=false;
     $timeout(function(){
       $scope.fade=true;
@@ -55,10 +56,10 @@ var app = angular
   })
   .controller('portfolioCTRL', function($scope, $timeout){
     $scope.items = [
-      {project: "Greenbelt Climbing Routes", link:"https://anthonyvuod.github.io/GreenbeltClimbingRoutes/", delay: ".1s", photo:"photos/greenbeltSS.png"},
-      {project: "Travis Perkins Photography", link:"https://anthonyvuod.github.io/TravisPerkinsPhotography/", delay: ".2s", photo:"photos/travisPerkinsSS2.png"},
-      {project: "How Much House?", link:"https://anthonyvuod.github.io/HowMuchHouse/", delay: ".3s", photo:"photos/houseSS2.png"},
-      {project: "Vu Properties", link:"https://anthonyvuod.github.io/VuProperties/", delay: ".4s", photo:"photos/vuPropertiesSS.png"}
+      {project: "Greenbelt Climbing Routes", link:"https://anthonyvuod.github.io/GreenbeltClimbingRoutes/", delay: ".1s", photo:"photos/greenbeltSS.jpg"},
+      {project: "Travis Perkins Photography", link:"https://anthonyvuod.github.io/TravisPerkinsPhotography/", delay: ".2s", photo:"photos/travisPerkinsSS2.jpg"},
+      {project: "How Much House?", link:"https://anthonyvuod.github.io/HowMuchHouse/", delay: ".3s", photo:"photos/houseSS2.jpg"},
+      {project: "Vu Properties", link:"https://anthonyvuod.github.io/VuProperties/", delay: ".4s", photo:"photos/vuPropertiesSS.jpg"}
     ];
 
     $scope.fade=false;

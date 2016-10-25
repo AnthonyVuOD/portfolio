@@ -207,25 +207,25 @@ body {
   @include animationSlideIn(0.5s,(translateX(-30px)));
 }
 #homeAbout{
-  background-image: url(../photos/rope3.png);
+  background-image: url(../photos/rope3.jpg);
   @include backgroundImagePosition(bottom);
   @include animationSlideIn(0.6s,(translateY(-30px)));
   @include homeDivSize;
 }
 #homePortfolio{
-  background-image: url(../photos/computer2.png);
+  background-image: url(../photos/computer2.jpg);
   @include backgroundImagePosition(center);
   @include animationSlideIn(0.6s,(translate(30px,-30px)));
   @include homeDivSize;
 }
 #homeCv{
-  background-image: url(../photos/guitar.png);
+  background-image: url(../photos/guitar.jpg);
   @include backgroundImagePosition(center);
   @include animationSlideIn(0.6s,(translateY(30px)));
   @include homeDivSize;
 }
 #homeContact{
-  background-image: url(../photos/pen.png);
+  background-image: url(../photos/pen.jpg);
   @include backgroundImagePosition(center);
   @include animationSlideIn(0.6s,(translate(25px,25px)));
   @include homeDivSize;
@@ -248,7 +248,7 @@ body {
 }
 //////////////////////////////////////ABOUT/////////////////////////////////////
 #aboutPhoto {
-  background-image: url('../photos/aboutPhoto2.png');
+  background-image: url('../photos/aboutPhoto2.jpg');
   @include backgroundImagePosition(center);
   @include templatePhotos();
   @include animationSlideIn(0.65s,(translateX(-35px)));
@@ -312,7 +312,7 @@ body {
 
 ///////////////////////////////////////CV/////////////////////////////////////
 #cvPhoto {
-  background-image: url('../photos/computerDesk.png');
+  background-image: url('../photos/computerDesk.jpg');
   @include backgroundImagePosition(center);
   @include templatePhotos();
   @include animationSlideIn(0.55s,(translateX(-35px)));
@@ -403,7 +403,7 @@ body {
 
 /////////////////////////////////////// CONTACT/////////////////////////////////////
 #contactPhoto {
-  background-image: url('../photos/wireFrameSketch5.png');
+  background-image: url('../photos/wireFrameSketch5.jpg');
   @include templatePhotos();
   @include backgroundImagePosition(center);
   @include animationSlideIn(0.65s,(translateX(-35px)));
